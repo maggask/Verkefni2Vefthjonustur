@@ -1,5 +1,5 @@
-Verkefni2Vefthjonustur
-======================
+Verkefni 2 í Vefþjónustum
+=========================
 
 Útfæra skal API fyrir einkunnir nemenda í kennslukerfi. Athugið að ekki er beðið um neinn framenda, heldur einungis um API aðgerðir. Þá er líka rétt að taka fram að verkefnið snýr eingöngu að einkunnum, en ekki að skilgreiningu verkefna, netprófa né annarra atriða sem komið geta við sögu í áfanga í kennslukerfi.
 
