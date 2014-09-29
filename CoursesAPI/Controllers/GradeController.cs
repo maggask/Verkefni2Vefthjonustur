@@ -8,6 +8,7 @@ using CoursesAPI.Services;
 using CoursesAPI.Services.DataAccess;
 using CoursesAPI.Services.Services;
 using CoursesAPI.Services.Models.Entities;
+using CoursesAPI.Models;
 
 namespace CoursesAPI.Controllers
 {
@@ -28,7 +29,7 @@ namespace CoursesAPI.Controllers
         [Route("")]
         public Project PostProject(ProjectCreateViewModel model)
         {
-            _service.AddProject(model);
+           return _service.AddProject(model);
         }
     }
 }
