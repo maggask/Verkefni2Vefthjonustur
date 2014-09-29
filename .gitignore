@@ -38,7 +38,7 @@ dlldata.c
 *_p.c
 *_i.h
 *.ilk
-#*.log
+*.log
 *.meta
 *.obj
 *.pch
