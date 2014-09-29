@@ -16,7 +16,7 @@ namespace CoursesAPI.Controllers
 		private readonly CoursesServiceProvider _service;
 
 		public CoursesController()
-		{
+		{ 
 			_service = new CoursesServiceProvider(new UnitOfWork<AppDataContext>());
 		}
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoursesAPI.Services.Services
 {
-    class GradeServiceProvider
+    public class GradeServiceProvider
     {
         private readonly IUnitOfWork _uow;
 
