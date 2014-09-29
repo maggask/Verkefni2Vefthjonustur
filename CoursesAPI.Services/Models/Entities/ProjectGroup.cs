@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoursesAPI.Services.Models.Entities
 {
-    class ProjectGroup
+    public class ProjectGroup
     {
         /// <summary>
         /// A database-generated ID
