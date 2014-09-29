@@ -69,6 +69,9 @@
     <Compile Include="Models\Entities\TeacherRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CoursesServiceProvider.cs" />
+    <Compile Include="Services\GradeServiceProvider.cs" />
+    <Compile Include="Services\GroupServiceProvider.cs" />
+    <Compile Include="Services\ProjectServiceProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CoursesAPI.Models\CoursesAPI.Models.csproj">

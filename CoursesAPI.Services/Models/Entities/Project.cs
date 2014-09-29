@@ -27,10 +27,10 @@ namespace CoursesAPI.Services.Models.Entities
         public int CourseInstanceID { get; set; }
 
         /// <summary>
-        /// Some parts like midtermtest (miðannarpróf) 
-        /// can help push up the final exam (lokapróf) 
-        /// grade if a student scores higher on the 
-        /// midtermtest than the final exam. ?????
+        /// Some "projects" like midtermtest (miðannarpróf) 
+        /// can help push up the final exam (lokapróf) grade if e.g 
+        /// a student scores higher on the midtermtest than the final exam.
+        /// This can also be other projects. Allows null.
         /// </summary>
         public int OnlyHigherThanProjectID { get; set; }
 
