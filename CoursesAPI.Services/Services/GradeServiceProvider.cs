@@ -50,13 +50,13 @@ namespace CoursesAPI.Services.Services
             return p;
         }
 
-        public Grade AddGrade(string personID, int projectID, float studentGrade)
+        public Grade AddGrade(GradeCreateViewModel model)
         {
             var g = new Grade
             {
-                PersonID = personID,
-                ProjectID = projectID,
-                StudentGrade = studentGrade
+                PersonID = model.personID,
+                ProjectID = model.projectID,
+                StudentGrade = model.studentGrade
             };
 
             return g;
