@@ -44,5 +44,27 @@ namespace CoursesAPI.Tests.Services
             Assert.IsNotNull(project, "The object should contain the created project!");
             Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
 		}
+
+        /// <summary>
+        /// Test to add a new grade with valid information.
+        /// </summary>
+        [TestMethod]
+        public void GradeTestAddNewGrade()
+        {
+            // Arrange:
+            var grade = new GradeCreateViewModel
+            {
+                ProjectID = 1,
+                StudentGrade = 8,
+                PersonID = "1309862429"
+            };
+
+            // Act:
+            var grad = _service.AddGrade(grade);
+
+            // Assert:
+            Assert.IsNotNull(grade, "The object should contain the new grade!");
+            Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
+        }
 	}
 }
