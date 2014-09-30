@@ -47,7 +47,7 @@ namespace CoursesAPI.Controllers
         /// course instance.
         /// </summary>
         /// <param name="model"></param>
-        /// <returns></returns>
+        /// <returns>Returns the grade that was given.</returns>
         [HttpPost]
         [Route("{action}")]
         public  Grade PostGrade(GradeCreateViewModel model)

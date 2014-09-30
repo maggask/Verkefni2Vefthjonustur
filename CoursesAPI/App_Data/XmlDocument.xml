@@ -531,8 +531,8 @@
             different types in a given
             course instance.
             </summary>
-            <param name=""></param>
-            <returns></returns>
+            <param name="model"></param>
+            <returns>Returns the grade that was given.</returns>
         </member>
     </members>
 </doc>
