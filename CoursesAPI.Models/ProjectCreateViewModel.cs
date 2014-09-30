@@ -33,7 +33,7 @@ namespace CoursesAPI.Models
         /// if you score higher on that project than
         /// something else, this ID is used. Can be empty.
         /// </summary>
-        public int      OnlyHigherThanProjectID  { get; set; }
+        public int?     OnlyHigherThanProjectID  { get; set; }
 
         /// <summary>
         /// The group id that the project belongs to, if any.
