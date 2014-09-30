@@ -54,9 +54,9 @@ namespace CoursesAPI.Services.Services
         {
             var g = new Grade
             {
-                PersonID = model.personID,
-                ProjectID = model.projectID,
-                StudentGrade = model.studentGrade
+                PersonID = model.PersonID,
+                ProjectID = model.ProjectID,
+                StudentGrade = model.StudentGrade
             };
 
             return g;
