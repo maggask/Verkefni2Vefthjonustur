@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoursesAPI.Models
 {
-    class GradeCreateViewModel
+    public class GradeCreateViewModel
     {
         public int ID { get; set; }
         public int ProjectID { get; set; }
