@@ -30,7 +30,7 @@ namespace CoursesAPI.Controllers
         /// to a given course instance.
         /// </summary>
         /// <param name="model"></param>
-        /// <returns></returns>
+        /// <returns>Returns the project that was created.</returns>
         [HttpPost]
         [Route("{action}")]
         public Project PostProject(ProjectCreateViewModel model)
