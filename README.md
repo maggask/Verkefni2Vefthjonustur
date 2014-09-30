@@ -8,9 +8,9 @@ Ekki er gefið upp hvernig þessi API eiga að líta út, heldur er það hluti 
 "Functional" kröfur:
 
 1. (20%) Kennari skal geta skilgreint einingahluti (sem geta verið af tegundunum verkefni, netpróf, miðannarpróf, lokapróf, endurtektarpróf), þ.e. hvernig einkunnir reiknast út, með eftirfarandi reglum:
-* Hægt skal vera að skrá "X af Y" bestu gilda
-* Hægt skal vera að skrá að tiltekinn verkhluti gildi til hækkunar (og þá hvaða einkunnahluti skuli gilda annars)
-* Hægt skal vera að skrá að tiltekinn hluti sé nauðsynlegur til að ná áfanganum (t.d. lokapróf)
+	* Hægt skal vera að skrá "X af Y" bestu gilda
+	* Hægt skal vera að skrá að tiltekinn verkhluti gildi til hækkunar (og þá hvaða einkunnahluti skuli gilda annars)
+	* Hægt skal vera að skrá að tiltekinn hluti sé nauðsynlegur til að ná áfanganum (t.d. lokapróf)
 
 2. (5%) Kennari skal geta skráð einkunnir í þeim einingahlutum sem hann hefur skilgreint í 1. 
 
