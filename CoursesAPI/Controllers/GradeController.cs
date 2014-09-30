@@ -26,7 +26,7 @@ namespace CoursesAPI.Controllers
         }
 
         [HttpPost]
-        [Route("")]
+        [Route("{action}")]
         public Project PostProject(ProjectCreateViewModel model)
         {
            return _service.AddProject(model);

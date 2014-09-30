@@ -1,5 +1,6 @@
 ﻿using CoursesAPI.Services.DataAccess;
 using CoursesAPI.Services.Models.Entities;
+using CoursesAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,6 @@ namespace CoursesAPI.Services.Services
         private readonly IRepository<Project> _projects;
         private readonly IRepository<ProjectGroup> _projectGroups;
         private readonly IRepository<Semester> _semesters;
-        private readonly IRepository<TeacherRegistration> _teacherRegistrations;
 
 		public GradeServiceProvider(IUnitOfWork uow)
 		{
@@ -32,8 +32,33 @@ namespace CoursesAPI.Services.Services
             _projects             = _uow.GetRepository<Project>();
             _projectGroups        = _uow.GetRepository<ProjectGroup>();
             _semesters            = _uow.GetRepository<Semester>();
-            _teacherRegistrations = _uow.GetRepository<TeacherRegistration>();
 		}
+
+        public Project AddProject(ProjectCreateViewModel model)
+        {
+            var p = new Project
+            {
+                Name = model.Name,
+                Weight = model.Weight,
+                MinGradeToPassCourse = model.MinGradeToPassCourse,
+                CourseInstanceID = model.CourseInstanceID,
+                OnlyHigherThanProjectID = model.OnlyHigherThanProjectID
+            };
+
+            _projects.Add(p);
+            _uow.Save();
+            return p;
+        }
+
+        public void AddGrade(string personID, int projectID, float studentGrade)
+        {
+            var g = new Grade
+            {
+                PersonID = personID,
+                ProjectID = projectID,
+                StudentGrade = studentGrade
+            };
+        }
 
     }
 }
