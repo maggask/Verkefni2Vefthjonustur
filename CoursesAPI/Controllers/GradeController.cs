@@ -31,5 +31,12 @@ namespace CoursesAPI.Controllers
         {
            return _service.AddProject(model);
         }
+
+        [HttpPost]
+        [Route("{action}")]
+        public  Grade PostGrade()
+        {
+            return _service.AddGrade();
+        }
     }
 }

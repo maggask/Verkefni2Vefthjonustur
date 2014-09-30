@@ -50,7 +50,7 @@ namespace CoursesAPI.Services.Services
             return p;
         }
 
-        public void AddGrade(string personID, int projectID, float studentGrade)
+        public Grade AddGrade(string personID, int projectID, float studentGrade)
         {
             var g = new Grade
             {
@@ -58,6 +58,8 @@ namespace CoursesAPI.Services.Services
                 ProjectID = projectID,
                 StudentGrade = studentGrade
             };
+
+            return g;
         }
 
     }
