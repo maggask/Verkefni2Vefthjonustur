@@ -25,6 +25,12 @@ namespace CoursesAPI.Controllers
             _service = new GradeServiceProvider(new UnitOfWork<AppDataContext>());
         }
 
+        /// <summary>
+        /// Adds new projects of different types
+        /// to a given course instance.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("{action}")]
         public Project PostProject(ProjectCreateViewModel model)
@@ -32,6 +38,13 @@ namespace CoursesAPI.Controllers
            return _service.AddProject(model);
         }
 
+        /// <summary>
+        /// Adds a new grade to projects of
+        /// different types in a given
+        /// course instance.
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("{action}")]
         public  Grade PostGrade()
