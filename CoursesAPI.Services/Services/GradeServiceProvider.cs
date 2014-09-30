@@ -60,6 +60,9 @@ namespace CoursesAPI.Services.Services
                 StudentGrade = model.StudentGrade
             };
 
+            _grades.Add(g);
+            _uow.Save();
+
             return g;
         }
 
