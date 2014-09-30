@@ -20,6 +20,9 @@ namespace CoursesAPI.Controllers
     {
         private readonly GradeServiceProvider _service;
 
+        /// <summary>
+        /// Constructor for the controller.
+        /// </summary>
         public GradeController()
         {
             _service = new GradeServiceProvider(new UnitOfWork<AppDataContext>());
@@ -47,9 +50,9 @@ namespace CoursesAPI.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("{action}")]
-        public  Grade PostGrade()
+        public  Grade PostGrade(GradeCreateViewModel model)
         {
-            return _service.AddGrade();
+            return _service.AddGrade(model);
         }
     }
 }
