@@ -46,7 +46,7 @@ namespace CoursesAPI.Controllers
         /// different types in a given
         /// course instance.
         /// </summary>
-        /// <param name=""></param>
+        /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("{action}")]
