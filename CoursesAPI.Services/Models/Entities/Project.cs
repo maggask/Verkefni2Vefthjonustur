@@ -32,7 +32,7 @@ namespace CoursesAPI.Services.Models.Entities
         /// a student scores higher on the midtermtest than the final exam.
         /// This can also be other projects. Allows null.
         /// </summary>
-        public int OnlyHigherThanProjectID { get; set; }
+        public int? OnlyHigherThanProjectID { get; set; }
 
         /// <summary>
         /// The weigth of a project, test et cetera, 5 is 5%,
