@@ -8,5 +8,9 @@ namespace CoursesAPI.Models
 {
     class GradeCreateViewModel
     {
+        public int ID { get; set; }
+        public int ProjectID { get; set; }
+        public float StudentGrade { get; set; }
+        public string PersonID { get; set; }
     }
 }
