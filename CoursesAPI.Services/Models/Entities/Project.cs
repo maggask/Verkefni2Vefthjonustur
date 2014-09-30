@@ -47,5 +47,10 @@ namespace CoursesAPI.Services.Models.Entities
         /// in the course.
         /// </summary>
         public float MinGradeToPassCourse { get; set; }
+
+        /// <summary>
+        /// The group id that the project belongs to, if any.
+        /// </summary>
+        public int ProjectGroupID { get; set; }
     }
 }

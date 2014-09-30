@@ -34,5 +34,10 @@ namespace CoursesAPI.Models
         /// something else, this ID is used. Can be empty.
         /// </summary>
         public int      OnlyHigherThanProjectID  { get; set; }
+
+        /// <summary>
+        /// The group id that the project belongs to, if any.
+        /// </summary>
+        public int      ProjectGroupID           { get; set; }
     }
 }

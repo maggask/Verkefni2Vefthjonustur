@@ -42,6 +42,7 @@ namespace CoursesAPI.Services.Services
                 Weight = model.Weight,
                 MinGradeToPassCourse = model.MinGradeToPassCourse,
                 CourseInstanceID = model.CourseInstanceID,
+                ProjectGroupID = model.ProjectGroupID,
                 OnlyHigherThanProjectID = model.OnlyHigherThanProjectID
             };
 
@@ -62,5 +63,33 @@ namespace CoursesAPI.Services.Services
             return g;
         }
 
+        public ProjectGroup AddProjectGroup(ProjectGroupCreateViewModel model)
+        {
+            var pg = new ProjectGroup
+            {
+                ID = model.Id,
+                Name = model.Name,
+                GradeProjectsCount = model.GradeprojectsCount
+            };
+
+            return pg;
+        }
+        //TODO
+        public void GetGroupGrade(int ID)
+        {
+            var theGroup = (from h in _projectGroups.All()
+                           where (h.ID == ID)
+                           select h).Single();
+
+            int howMany = theGroup.GradeProjectsCount;
+
+            var allProjects = (from r in _projects.All()
+                          where (r.ProjectGroupID == ID)
+                          select r).ToList();
+
+            
+            
+
+        }
     }
 }
