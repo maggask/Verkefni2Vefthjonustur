@@ -534,5 +534,14 @@
             <param name="model"></param>
             <returns>Returns the grade that was given.</returns>
         </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.PostProjectGroup(CoursesAPI.Models.ProjectGroupCreateViewModel)">
+            <summary>
+            Adds a new project group of 
+            different types in a given
+            course instance.
+            </summary>
+            <param name="model"></param>
+            <returns>Returns the group that was created.</returns>
+        </member>
     </members>
 </doc>

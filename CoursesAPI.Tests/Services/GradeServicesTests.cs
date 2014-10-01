@@ -66,5 +66,23 @@ namespace CoursesAPI.Tests.Services
             Assert.IsNotNull(grade, "The object should contain the new grade!");
             Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
         }
+
+        [TestMethod]
+        public void GradeTestAddNewProjectGroup()
+        {
+            // Arrange:
+            var projectGroup = new ProjectGroupCreateViewModel
+            {
+                Name = "Netpróf",
+                GradeProjectsCount = 5
+            };
+
+            // Act:
+            var projG = _service.AddProjectGroup(projectGroup);
+
+            // Assert
+            Assert.IsNotNull(projectGroup, "The object should contain the new project group!");
+            Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
+        }
 	}
 }

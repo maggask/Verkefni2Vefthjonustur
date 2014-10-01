@@ -54,5 +54,19 @@ namespace CoursesAPI.Controllers
         {
             return _service.AddGrade(model);
         }
+
+        /// <summary>
+        /// Adds a new project group of 
+        /// different types in a given
+        /// course instance.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Returns the group that was created.</returns>
+        [HttpPost]
+        [Route("{action}")]
+        public ProjectGroup PostProjectGroup(ProjectGroupCreateViewModel model)
+        {
+            return _service.AddProjectGroup(model);
+        }
     }
 }

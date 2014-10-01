@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoursesAPI.Models
 {
-    class ProjectGroupCreateViewModel
+    public class ProjectGroupCreateViewModel
     {
         /// <summary>
         /// A database-generated ID

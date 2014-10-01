@@ -70,10 +70,13 @@ namespace CoursesAPI.Services.Services
         {
             var pg = new ProjectGroup
             {
-                ID = model.Id,
+                ID = model.ID,
                 Name = model.Name,
-                GradeProjectsCount = model.GradeprojectsCount
+                GradeProjectsCount = model.GradeProjectsCount
             };
+
+            _projectGroups.Add(pg);
+            _uow.Save();
 
             return pg;
         }
