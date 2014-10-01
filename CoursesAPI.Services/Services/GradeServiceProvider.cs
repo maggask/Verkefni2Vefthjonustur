@@ -72,7 +72,7 @@ namespace CoursesAPI.Services.Services
             {
                 ID = model.ID,
                 Name = model.Name,
-                GradeProjectsCount = model.GradeProjectsCount
+                GradedProjectsCount = model.GradedProjectsCount
             };
 
             _projectGroups.Add(pg);
@@ -80,22 +80,22 @@ namespace CoursesAPI.Services.Services
 
             return pg;
         }
-        //TODO
+        
+        // Helpfunction to get X of Y best grades in
+        // a project group.
         public void GetGroupGrade(int ID)
         {
             var theGroup = (from h in _projectGroups.All()
                            where (h.ID == ID)
-                           select h).Single();
+                           select h).SingleOrDefault();
 
-            int howMany = theGroup.GradeProjectsCount;
+            int howMany = theGroup.GradedProjectsCount;
 
-            var allProjects = (from r in _projects.All()
-                          where (r.ProjectGroupID == ID)
-                          select r).ToList();
-
-            
-            
-
+            var allProjects = (from g in _grades.All()
+                               join p in _projects.All() on g.ProjectID equals p.ID 
+                               where p.ProjectGroupID == ID
+                               orderby g.StudentGrade descending
+                               select g).Take(howMany).ToList();
         }
     }
 }

@@ -46,11 +46,11 @@ namespace CoursesAPI.Services.Models.Entities
         /// of the final exam and the final grade
         /// in the course.
         /// </summary>
-        public float MinGradeToPassCourse { get; set; }
+        public float? MinGradeToPassCourse { get; set; }
 
         /// <summary>
         /// The group id that the project belongs to, if any.
         /// </summary>
-        public int ProjectGroupID { get; set; }
+        public int? ProjectGroupID { get; set; }
     }
 }

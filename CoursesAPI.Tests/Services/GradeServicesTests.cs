@@ -74,7 +74,7 @@ namespace CoursesAPI.Tests.Services
             var projectGroup = new ProjectGroupCreateViewModel
             {
                 Name = "Netpróf",
-                GradeProjectsCount = 5
+                GradedProjectsCount = 5
             };
 
             // Act:

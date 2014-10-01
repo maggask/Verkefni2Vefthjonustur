@@ -35,7 +35,7 @@ namespace CoursesAPI.Controllers
         /// <param name="model"></param>
         /// <returns>Returns the project that was created.</returns>
         [HttpPost]
-        [Route("{action}")]
+        [Route("")]
         public Project PostProject(ProjectCreateViewModel model)
         {
            return _service.AddProject(model);
@@ -49,7 +49,7 @@ namespace CoursesAPI.Controllers
         /// <param name="model"></param>
         /// <returns>Returns the grade that was given.</returns>
         [HttpPost]
-        [Route("{action}")]
+        [Route("")]
         public  Grade PostGrade(GradeCreateViewModel model)
         {
             return _service.AddGrade(model);
@@ -62,11 +62,18 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Returns the group that was created.</returns>
-        [HttpPost]
+        /*[HttpPost]
         [Route("{action}")]
         public ProjectGroup PostProjectGroup(ProjectGroupCreateViewModel model)
         {
             return _service.AddProjectGroup(model);
+        }*/
+
+        [HttpGet]
+        [Route("{ID:int}")]
+        public void GetGroupGrade(int ID)
+        {
+            _service.GetGroupGrade(ID);
         }
     }
 }

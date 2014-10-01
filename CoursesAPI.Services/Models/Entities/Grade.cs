@@ -21,7 +21,7 @@ namespace CoursesAPI.Services.Models.Entities
         /// <summary>
         /// A students grade.
         /// </summary>
-        public float StudentGrade { get; set; }
+        public float? StudentGrade { get; set; }
 
         /// <summary>
         /// A reference to the Person table, SSN.

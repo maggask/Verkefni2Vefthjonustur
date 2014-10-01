@@ -23,6 +23,6 @@ namespace CoursesAPI.Services.Models.Entities
         /// How many e.g projects count to final
         /// grade in a course.
         /// </summary>
-        public int GradeProjectsCount { get; set; }
+        public int GradedProjectsCount { get; set; }
     }
 }

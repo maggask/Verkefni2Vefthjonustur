@@ -21,7 +21,7 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The minimal grade to pass the course.
         /// </summary>
-        public float    MinGradeToPassCourse     { get; set; }
+        public float?   MinGradeToPassCourse     { get; set; }
 
         /// <summary>
         /// The instance ID of the given course.
@@ -38,6 +38,6 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The group id that the project belongs to, if any.
         /// </summary>
-        public int      ProjectGroupID           { get; set; }
+        public int?     ProjectGroupID           { get; set; }
     }
 }
