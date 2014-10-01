@@ -16,7 +16,7 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The students grade in a project involved.
         /// </summary>
-        public float? StudentGrade { get; set; }
+        public float StudentGrade { get; set; }
 
         /// <summary>
         /// Instance ID of the person involved.

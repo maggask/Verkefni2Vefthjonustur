@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoursesAPI.Services.Models.Entities
 {
@@ -21,7 +17,7 @@ namespace CoursesAPI.Services.Models.Entities
         /// <summary>
         /// A students grade.
         /// </summary>
-        public float? StudentGrade { get; set; }
+        public float StudentGrade { get; set; }
 
         /// <summary>
         /// A reference to the Person table, SSN.

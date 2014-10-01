@@ -93,8 +93,8 @@ namespace CoursesAPI.Services.Services
 
             var allProjects = (from g in _grades.All()
                                join p in _projects.All() on g.ProjectID equals p.ID 
-                               where p.ProjectGroupID == ID
                                orderby g.StudentGrade descending
+                               where p.ProjectGroupID == ID
                                select g).Take(howMany).ToList();
         }
     }
