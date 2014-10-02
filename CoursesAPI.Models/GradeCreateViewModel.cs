@@ -19,6 +19,11 @@ namespace CoursesAPI.Models
         public float StudentGrade { get; set; }
 
         /// <summary>
+        /// The students weighted grade(grade * weight/100) in a project involved.
+        /// </summary>
+        public float WeightedStudentGrade { get; set; }
+
+        /// <summary>
         /// Instance ID of the person involved.
         /// </summary>
         public string PersonID { get; set; }

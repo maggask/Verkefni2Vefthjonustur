@@ -83,7 +83,7 @@ namespace CoursesAPI.Services.Services
         
         // Helpfunction to get X of Y best grades in
         // a project group.
-        public void GetGroupGrade(int ID)
+        public float GetGroupGrade(int ID)
         {
             var theGroup = (from h in _projectGroups.All()
                            where (h.ID == ID)
@@ -96,6 +96,70 @@ namespace CoursesAPI.Services.Services
                                orderby g.StudentGrade descending
                                where p.ProjectGroupID == ID
                                select g).Take(howMany).ToList();
+
+            return allProjects.Average(x => x.StudentGrade);
+        }
+
+        public float GetFinalGrade(String StudentID)
+        {
+            float finalGrade = 0;
+
+            var allBasicGrades = (from g in _grades.All()
+                             join p in _projects.All() on g.ProjectID equals p.ID 
+                             where (g.PersonID == StudentID 
+                                    && p.ProjectGroupID == null
+                                    && p.OnlyHigherThanProjectID == null)
+                             select g).ToList();
+
+            foreach(var grade in allBasicGrades)
+            {
+                finalGrade =+ (grade.StudentGrade);
+            }
+
+            var allGroupGrades = (from g in _grades.All()
+                                  join p in _projects.All() on g.ProjectID equals p.ID
+                                  where (g.PersonID == StudentID
+                                         && p.ProjectGroupID != null
+                                         && p.OnlyHigherThanProjectID == null)
+                                         orderby (p.ProjectGroupID) descending
+                                  select g).ToList();
+
+            float previous = -1;
+            foreach (var grade in allGroupGrades)
+            {
+                if(grade.ProjectID == previous)
+                {
+                    continue;
+                }
+
+                finalGrade =+ GetGroupGrade(grade.ProjectID);
+                previous = grade.ProjectID;
+            }
+
+            var allHigherThanProjects = (from g in _grades.All()
+                                  join p in _projects.All() on g.ProjectID equals p.ID
+                                  where (g.PersonID == StudentID
+                                         && p.ProjectGroupID == null
+                                         && p.OnlyHigherThanProjectID != null)
+                                  select p).ToList();
+
+            foreach (var proj in allHigherThanProjects)
+            {
+                var grade1 = (from g in _grades.All()
+                              where g.ProjectID == proj.ID
+                              select g.StudentGrade).SingleOrDefault();
+
+                var grade2 = (from g in _grades.All()
+                              where g.ProjectID == proj.OnlyHigherThanProjectID
+                              select g.StudentGrade).SingleOrDefault();
+
+                if (grade1 > grade2)
+                {
+
+                }
+            }
+
+            return finalGrade;
         }
     }
 }
