@@ -77,7 +77,7 @@ namespace CoursesAPI.Controllers
         /// <param name="studentID"></param>
         /// <returns>Return grade for project.</returns>
         [HttpGet]
-        [Route("{projectID}/{studentID}")]
+        [Route("GetGrade/{projectID}/{studentID}")]
         public float GetGrade(int projectID, String studentID)
         {
             return _service.GetGrade(projectID, studentID);
@@ -90,10 +90,38 @@ namespace CoursesAPI.Controllers
         /// <param name="studentID"></param>
         /// <returns>Returns the final grade in a course or current grade.</returns>
         [HttpGet]
-        [Route("{studentID}")]
+        [Route("GetFinalGrade/{studentID}")]
         public float GetFinalGrade(String studentID)
         {
             return _service.GetFinalGrade(studentID);
+        }
+
+        /// <summary>
+        /// Gets a students ranking in a
+        /// single project.
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <param name="projectID"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetProjectRankings/{studentID}/{projectID}")]
+        public String GetProjectRankings(String studentID, int projectID)
+        {
+            return _service.GetProjectRankings(studentID, projectID);
+        }
+
+        /// <summary>
+        /// Gets a students final grade ranking
+        /// among others in a given course.
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <param name="projectID"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetFinalRankings/{studentID}")]
+        public String GetFinalRankings(String studentID)
+        {
+            return _service.GetFinalRankings(studentID);
         }
     }
 }

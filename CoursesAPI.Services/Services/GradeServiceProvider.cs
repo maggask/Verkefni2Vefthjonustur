@@ -112,7 +112,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        public float GetGroupGrade(int ID)
+        public float GetGroupGrade(int ID, String studentID)
         {
             var theGroup = (from h in _projectGroups.All()
                            where (h.ID == ID)
@@ -124,6 +124,7 @@ namespace CoursesAPI.Services.Services
                                join p in _projects.All() on g.ProjectID equals p.ID 
                                orderby g.StudentGrade descending
                                where p.ProjectGroupID == ID
+                                    && g.PersonID == studentID
                                select g).Take(howMany).ToList();
 
             var weight = (from p in _projects.All()
@@ -172,7 +173,7 @@ namespace CoursesAPI.Services.Services
                     continue;
                 }
 
-                finalGrade += GetGroupGrade(p.ProjectGroupID.GetValueOrDefault());
+                finalGrade += GetGroupGrade(p.ProjectGroupID.GetValueOrDefault(), studentID);
                 previous = p.ProjectGroupID.GetValueOrDefault();
             }
 
@@ -187,15 +188,17 @@ namespace CoursesAPI.Services.Services
             {
                 var grade1 = (from g in _grades.All()
                               where g.ProjectID == proj.ID
+                                    && g.PersonID == studentID
                               select g.WeightedStudentGrade).SingleOrDefault();
 
                 var grade2 = (from g in _grades.All()
                               where g.ProjectID == proj.OnlyHigherThanProjectID
+                                    && g.PersonID == studentID
                               select g.WeightedStudentGrade).SingleOrDefault();
 
-                if (grade2 > grade1)
+                if (grade1 > grade2)
                 {
-                    finalGrade += (grade2 - grade1);
+                    finalGrade += (grade1 - grade2);
                 }
             }
 
@@ -243,27 +246,46 @@ namespace CoursesAPI.Services.Services
         {
             var allGrades = AllGradesInOrder(projectID);
             var grade = GetGrade(projectID, studentID);
-            int standing = allGrades.BinarySearch(grade);
+
+            int standing = allGrades.BinarySearch(grade) + 1;
+
             String rankings = (standing.ToString() + "/" + allGrades.Count());
+
             return rankings;
         }
         
+        /// <summary>
+        /// Arranges all final grades
+        /// in descending order.
+        /// </summary>
+        /// <returns></returns>
         public List<float> AllFinalGradesInOrder()
         {
             List<float> allFinalGradesInOrder = new List<float>();
+
             foreach (var p in _persons.All())
             {
                 allFinalGradesInOrder.Add(GetFinalGrade(p.SSN));
             }
+
             return allFinalGradesInOrder;
         }
 
-        public String GetFinalRankings(String studentID, int projectID)
+        /// <summary>
+        /// Gets a students final grade ranking
+        /// among others in a given course.
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
+        public String GetFinalRankings(String studentID)
         {
             var allGrades = AllFinalGradesInOrder();
             var grade = GetFinalGrade(studentID);
-            int standing = allGrades.BinarySearch(grade);
+
+            int standing = allGrades.BinarySearch(grade) + 1;
+
             String rankings = (standing.ToString() + "/" + allGrades.Count());
+
             return rankings;
         }
     }

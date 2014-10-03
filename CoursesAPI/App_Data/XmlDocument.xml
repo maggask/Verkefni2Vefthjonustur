@@ -563,8 +563,25 @@
             student or the current grade.
             </summary>
             <param name="studentID"></param>
-            <param name="course"></param>
             <returns>Returns the final grade in a course or current grade.</returns>
+        </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.GetProjectRankings(System.String,System.Int32)">
+            <summary>
+            Gets a students ranking in a
+            single project.
+            </summary>
+            <param name="studentID"></param>
+            <param name="projectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalRankings(System.String)">
+            <summary>
+            Gets a students final grade ranking
+            among others in a given course.
+            </summary>
+            <param name="studentID"></param>
+            <param name="projectID"></param>
+            <returns></returns>
         </member>
         <member name="T:CoursesAPI.Filters.AppExceptionFilter">
             <summary>
