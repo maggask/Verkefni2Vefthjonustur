@@ -101,8 +101,12 @@ namespace CoursesAPI.Services.Services
                                orderby g.StudentGrade descending
                                where p.ProjectGroupID == ID
                                select g).Take(howMany).ToList();
-            var weight = allProjects.Single().WeightedStudentGrade;
-            return ((allProjects.Average(x => x.StudentGrade))*weight);
+
+            var weight = (from p in _projects.All()
+                          where p.ProjectGroupID == ID
+                          select p.Weight).FirstOrDefault();
+
+            return (allProjects.Average(x => x.WeightedStudentGrade));
         }
 
         public float GetFinalGrade(String studentID, int course)

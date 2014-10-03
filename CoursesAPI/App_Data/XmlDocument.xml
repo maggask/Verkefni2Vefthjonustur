@@ -539,7 +539,7 @@
             <param name="model"></param>
             <returns>Returns the grade that was given.</returns>
         </member>
-        <member name="M:CoursesAPI.Controllers.GradeController.GetGroupGrade(System.Int32)">
+        <member name="M:CoursesAPI.Controllers.GradeController.PostProjectGroup(CoursesAPI.Models.ProjectGroupCreateViewModel)">
             <summary>
             Adds a new project group of 
             different types in a given
@@ -547,6 +547,15 @@
             </summary>
             <param name="model"></param>
             <returns>Returns the group that was created.</returns>
+        </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.GetGrade(System.Int32,System.String)">
+            <summary>
+            Gets a student grade from
+            specific project.
+            </summary>
+            <param name="projectID"></param>
+            <param name="studentID"></param>
+            <returns>Return grade for project.</returns>
         </member>
         <member name="T:CoursesAPI.Filters.AppExceptionFilter">
             <summary>
