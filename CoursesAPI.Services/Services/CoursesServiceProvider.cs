@@ -35,15 +35,6 @@ namespace CoursesAPI.Services.Services
             _teacherRegistrations = _uow.GetRepository<TeacherRegistration>();
 		}
 
-        public void CreateProject(string name, int weight, int minGradeToPass)
-        {
-            Project p = new Project();
-            p.Name = name;
-            p.Weight = weight;
-            p.MinGradeToPassCourse = minGradeToPass;
-            _projects.Add(p);
-        }
-
 		public List<Person> GetCourseTeachers(string semester)
 		{
 			// TODO: Lists all teachers that teach a course in a given semester

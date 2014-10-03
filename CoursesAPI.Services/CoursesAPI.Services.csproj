@@ -46,6 +46,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoursesAPI\bin\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +63,11 @@
     <Compile Include="DataAccess\IUnitOfWork.cs" />
     <Compile Include="DataAccess\Repository.cs" />
     <Compile Include="DataAccess\UnitOfWork.cs" />
+    <Compile Include="Exceptions\CoursesAPIException.cs" />
+    <Compile Include="Exceptions\CoursesAPIObjectNotFoundException.cs" />
+    <Compile Include="Exceptions\CoursesAPIValidationException.cs" />
+    <Compile Include="Exceptions\ErrorCodes.cs" />
+    <Compile Include="Helpers\CourseAPIValidation.cs" />
     <Compile Include="Models\Entities\CourseInstance.cs" />
     <Compile Include="Models\Entities\CourseTemplate.cs" />
     <Compile Include="Models\Entities\Grade.cs" />

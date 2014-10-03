@@ -4,17 +4,21 @@ using CoursesAPI.Models;
 using CoursesAPI.Services.DataAccess;
 using CoursesAPI.Services.Models.Entities;
 using CoursesAPI.Services.Services;
+using System.Security.Claims;
 
 namespace CoursesAPI.Controllers
 {
     /// <summary>
     /// CoursesController represents recourses belonging to courses.
-    /// </summary>
+    /// </summary>   
 	[RoutePrefix("api/courses")]
 	public class CoursesController : ApiController
 	{
 		private readonly CoursesServiceProvider _service;
 
+        /// <summary>
+        /// Parameterless constructor.
+        /// </summary>
 		public CoursesController()
 		{ 
 			_service = new CoursesServiceProvider(new UnitOfWork<AppDataContext>());
@@ -25,7 +29,8 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="semester"></param>
         /// <returns></returns>
-		[Route("{semester}/teachers")]
+		[Authorize(Roles="student")]
+        [Route("{semester}/teachers")]
 		public List<Person> GetCourseTeachers(string semester)
 		{
 			return _service.GetCourseTeachers(semester);
