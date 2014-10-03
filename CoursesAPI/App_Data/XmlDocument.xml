@@ -557,6 +557,15 @@
             <param name="studentID"></param>
             <returns>Return grade for project.</returns>
         </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalGrade(System.String)">
+            <summary>
+            Gets the final grade of a given
+            student or the current grade.
+            </summary>
+            <param name="studentID"></param>
+            <param name="course"></param>
+            <returns>Returns the final grade in a course or current grade.</returns>
+        </member>
         <member name="T:CoursesAPI.Filters.AppExceptionFilter">
             <summary>
             An attempt to write a generic exception filter, which would ensure..

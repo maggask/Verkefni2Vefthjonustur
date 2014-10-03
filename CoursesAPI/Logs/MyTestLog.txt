@@ -940,3 +940,287 @@ OK - Content-type='application/json; charset=utf-8', content-length=unknown
 0 - 
 0 - 
 0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/dbd79ee47a294307a6d3618cbbe4b123?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/4/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - UserMessage='No HTTP resource was found that matches the request URI 'http://localhost:12298/api/courses/1/4/1309862429'.', MessageDetail='No action was found on the controller 'Grade' that matches the request.'
+NotFound - UserMessage='No HTTP resource was found that matches the request URI 'http://localhost:12298/api/courses/1/4/1309862429'.', MessageDetail='No action was found on the controller 'Grade' that matches the request.'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/aca86d56401a44bd98d857b90928afdf?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/4/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetGrade(Int32 projectID, String studentID)'
+0 - 
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '4'
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: projectID=4, studentID=1309862429
+0 - Action='GetGrade(projectID=4, studentID=1309862429)'
+0 - Invoking action 'GetGrade(projectID=4, studentID=1309862429)'
+0 - Action returned '10'
+0 - Type='Single', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Single', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='10', type='Single', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/1dbd7aa578b74a588697294d36844881?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/1309862429/1
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/d961efd49f8443d4848f6774c7f9ad28?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetGroupGrade(Int32 ID)'
+0 - 
+0 - Binding parameter 'ID'
+0 - Parameter 'ID' bound to the value '1309862429'
+0 - Model state is valid. Values: ID=1309862429
+0 - Action='GetGroupGrade(ID=1309862429)'
+0 - Invoking action 'GetGroupGrade(ID=1309862429)'
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/f00a39866a9f496b89c1e934136bc3b3?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetGroupGrade(Int32 ID)'
+0 - 
+0 - Binding parameter 'ID'
+0 - Parameter 'ID' bound to the value '1309862429'
+0 - Model state is valid. Values: ID=1309862429
+0 - Action='GetGroupGrade(ID=1309862429)'
+0 - Invoking action 'GetGroupGrade(ID=1309862429)'
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/eaa880b22aad45c08a57eb8352dddb87?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalGrade(String studentID)'
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: studentID=1309862429
+0 - Action='GetFinalGrade(studentID=1309862429)'
+0 - Invoking action 'GetFinalGrade(studentID=1309862429)'
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/2cd234cb1684473d842004ba63a0a11a?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalGrade(String studentID)'
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: studentID=1309862429
+0 - Action='GetFinalGrade(studentID=1309862429)'
+0 - Invoking action 'GetFinalGrade(studentID=1309862429)'
+0 - Action returned '0.17'
+0 - Type='Single', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Single', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='0.17', type='Single', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalGrade(String studentID)'
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: studentID=1309862429
+0 - Action='GetFinalGrade(studentID=1309862429)'
+0 - Invoking action 'GetFinalGrade(studentID=1309862429)'
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/cb7d5f9b70f443aabf4e733d6c6d382c?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalGrade(String studentID)'
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: studentID=1309862429
+0 - Action='GetFinalGrade(studentID=1309862429)'
+0 - Invoking action 'GetFinalGrade(studentID=1309862429)'

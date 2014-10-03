@@ -77,17 +77,23 @@ namespace CoursesAPI.Controllers
         /// <param name="studentID"></param>
         /// <returns>Return grade for project.</returns>
         [HttpGet]
-        [Route("{ID}/{SSN}")]
+        [Route("{projectID}/{studentID}")]
         public float GetGrade(int projectID, String studentID)
         {
             return _service.GetGrade(projectID, studentID);
         }
 
+        /// <summary>
+        /// Gets the final grade of a given
+        /// student or the current grade.
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <returns>Returns the final grade in a course or current grade.</returns>
         [HttpGet]
-        [Route("{ID:int}")]
-        public float GetGroupGrade(int ID)
+        [Route("{studentID}")]
+        public float GetFinalGrade(String studentID)
         {
-            return _service.GetGroupGrade(ID);
+            return _service.GetFinalGrade(studentID);
         }
     }
 }
