@@ -185,7 +185,7 @@ namespace CoursesAPI.Services.Services
             return allGrades;
         }
 
-        public String GetRankings(String studentID, int projectID)
+        public String GetProjectRankings(String studentID, int projectID)
         {
             var allGrades = AllGradesInOrder(projectID);
             var grade = GetGrade(projectID, studentID);
@@ -193,5 +193,20 @@ namespace CoursesAPI.Services.Services
             String rankings = (standing.ToString() + "/" + allGrades.Count());
             return rankings;
         }
+        /*
+        public List<float> AllFinalGradesInOrder()
+        {
+            var allStudents = (from p in _persons.All()
+                                   where p.)
+            foreach (var t in _persons)
+            {
+
+            }
+        }
+
+        public String GetFinalRankings(String studentID, int projectID)
+        {
+
+        }*/
     }
 }
