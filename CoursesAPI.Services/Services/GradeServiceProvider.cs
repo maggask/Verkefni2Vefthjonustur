@@ -248,19 +248,23 @@ namespace CoursesAPI.Services.Services
             return rankings;
         }
         
-        /**public List<float> AllFinalGradesInOrder()
+        public List<float> AllFinalGradesInOrder()
         {
-            var allStudents = (from p in _persons.All()
-                                   where p.)
-            foreach (var t in _persons)
+            List<float> allFinalGradesInOrder = new List<float>();
+            foreach (var p in _persons.All())
             {
-
+                allFinalGradesInOrder.Add(GetFinalGrade(p.SSN));
             }
+            return allFinalGradesInOrder;
         }
 
         public String GetFinalRankings(String studentID, int projectID)
         {
-
-        }*/
+            var allGrades = AllFinalGradesInOrder();
+            var grade = GetFinalGrade(studentID);
+            int standing = allGrades.BinarySearch(grade);
+            String rankings = (standing.ToString() + "/" + allGrades.Count());
+            return rankings;
+        }
     }
 }
