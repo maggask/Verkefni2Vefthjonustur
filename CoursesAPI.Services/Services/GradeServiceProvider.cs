@@ -53,11 +53,16 @@ namespace CoursesAPI.Services.Services
 
         public Grade AddGrade(GradeCreateViewModel model)
         {
+            var weight = (from w in _projects.All()
+                          where w.ID == model.ProjectID
+                          select w.Weight).SingleOrDefault();
+
             var g = new Grade
             {
                 PersonID = model.PersonID,
                 ProjectID = model.ProjectID,
-                StudentGrade = model.StudentGrade
+                StudentGrade = model.StudentGrade,
+                WeightedStudentGrade = (model.StudentGrade * weight/100)
             };
 
             _grades.Add(g);
@@ -96,8 +101,8 @@ namespace CoursesAPI.Services.Services
                                orderby g.StudentGrade descending
                                where p.ProjectGroupID == ID
                                select g).Take(howMany).ToList();
-
-            return allProjects.Average(x => x.StudentGrade);
+            var weight = allProjects.Single().WeightedStudentGrade;
+            return ((allProjects.Average(x => x.StudentGrade))*weight);
         }
 
         public float GetFinalGrade(String StudentID)
@@ -113,7 +118,7 @@ namespace CoursesAPI.Services.Services
 
             foreach(var grade in allBasicGrades)
             {
-                finalGrade =+ (grade.StudentGrade);
+                finalGrade =+ (grade.WeightedStudentGrade);
             }
 
             var allGroupGrades = (from g in _grades.All()
@@ -147,19 +152,46 @@ namespace CoursesAPI.Services.Services
             {
                 var grade1 = (from g in _grades.All()
                               where g.ProjectID == proj.ID
-                              select g.StudentGrade).SingleOrDefault();
+                              select g.WeightedStudentGrade).SingleOrDefault();
 
                 var grade2 = (from g in _grades.All()
                               where g.ProjectID == proj.OnlyHigherThanProjectID
-                              select g.StudentGrade).SingleOrDefault();
+                              select g.WeightedStudentGrade).SingleOrDefault();
 
                 if (grade1 > grade2)
                 {
-
+                    finalGrade += (grade2 - grade1);
                 }
             }
 
             return finalGrade;
+        }
+
+        public float GetGrade(int projectID, String studentID)
+        {
+            var grade = (from g in _grades.All()
+                         where g.ProjectID == projectID
+                         && g.PersonID == studentID
+                         select g.StudentGrade).SingleOrDefault();
+            return grade;
+        }
+
+        public List<float> AllGradesInOrder(int projectID)
+        {
+            var allGrades = (from g in _grades.All()
+                             where g.ProjectID == projectID
+                             orderby g.StudentGrade descending
+                             select g.StudentGrade).ToList();
+            return allGrades;
+        }
+
+        public String GetRankings(String studentID, int projectID)
+        {
+            var allGrades = AllGradesInOrder(projectID);
+            var grade = GetGrade(projectID, studentID);
+            int standing = allGrades.BinarySearch(grade);
+            String rankings = (standing.ToString() + "/" + allGrades.Count());
+            return rankings;
         }
     }
 }
