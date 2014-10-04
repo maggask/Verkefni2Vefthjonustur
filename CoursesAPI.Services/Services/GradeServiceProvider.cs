@@ -140,13 +140,14 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
-        public float GetCurrentFinalGrade(String studentID)
+        public float GetCurrentFinalGrade(int courseInstanceID, String studentID)
         {
             float finalGrade = 0;
 
             var allBasicGrades = (from g in _grades.All()
                              join p in _projects.All() on g.ProjectID equals p.ID 
                              where (g.PersonID == studentID 
+                                    && p.CourseInstanceID == courseInstanceID
                                     && p.ProjectGroupID == null
                                     && p.OnlyHigherThanProjectID == null)
                              select g).ToList();
@@ -159,9 +160,10 @@ namespace CoursesAPI.Services.Services
             var allGroupGrades = (from g in _grades.All()
                                   join p in _projects.All() on g.ProjectID equals p.ID
                                   where (g.PersonID == studentID
-                                         && p.ProjectGroupID != null
-                                         && p.OnlyHigherThanProjectID == null)
-                                         orderby (p.ProjectGroupID) descending
+                                        && p.CourseInstanceID == courseInstanceID
+                                        && p.ProjectGroupID != null
+                                        && p.OnlyHigherThanProjectID == null)
+                                  orderby (p.ProjectGroupID) descending
                                   select p).ToList();
 
             float previous = -1;
@@ -180,6 +182,7 @@ namespace CoursesAPI.Services.Services
             var allHigherThanProjects = (from g in _grades.All()
                                         join p in _projects.All() on g.ProjectID equals p.ID
                                         where (g.PersonID == studentID
+                                                && p.CourseInstanceID == courseInstanceID
                                                 && p.ProjectGroupID == null
                                                 && p.OnlyHigherThanProjectID != null)
                                         select p).ToList();
@@ -259,13 +262,13 @@ namespace CoursesAPI.Services.Services
         /// in descending order.
         /// </summary>
         /// <returns></returns>
-        public List<float> AllFinalGradesInOrder()
+        public List<float> AllFinalGradesInOrder(int courseInstanceID)
         {
             List<float> allFinalGradesInOrder = new List<float>();
 
             foreach (var p in _persons.All())
             {
-                allFinalGradesInOrder.Add(GetCurrentFinalGrade(p.SSN));
+                allFinalGradesInOrder.Add(GetCurrentFinalGrade(courseInstanceID, p.SSN));
             }
 
             return allFinalGradesInOrder;
@@ -277,10 +280,10 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
-        public String GetFinalRankings(String studentID)
+        public String GetFinalRankings(int courseInstanceID, String studentID)
         {
-            var allGrades = AllFinalGradesInOrder();
-            var grade = GetCurrentFinalGrade(studentID);
+            var allGrades = AllFinalGradesInOrder(courseInstanceID);
+            var grade = GetCurrentFinalGrade(courseInstanceID, studentID);
 
             int standing = allGrades.BinarySearch(grade) + 1;
 
@@ -297,8 +300,15 @@ namespace CoursesAPI.Services.Services
                                          where p.CourseInstanceID == courseInstanceID
                                                && p.MinGradeToPassCourse != null
                                          select p).ToList();
+            foreach(var c in checkIfFailed)
+            {
+                if(c.MinGradeToPassCourse > GetGrade(c.ID, studentID))
+                {
+                    return "Failed to pass exam";
+                }
+            }
 
-            float finalGrade = GetCurrentFinalGrade(studentID);
+            float finalGrade = GetCurrentFinalGrade(courseInstanceID, studentID);
             float totalPossibleGrade = ((from p in _projects.All()
                                       where p.CourseInstanceID == courseInstanceID
                                             && p.ProjectGroupID == null
@@ -344,6 +354,15 @@ namespace CoursesAPI.Services.Services
                 fin = 10;
             }
             return ( fin.ToString()+ "   " + passed);
+        }
+
+        public List<float> GetAllGradesByStudent(String studentID)
+        {
+            var allGrades =(from g in _grades.All()
+                                    where g.PersonID == studentID
+                                    select g.StudentGrade).ToList();
+
+            return allGrades;
         }
     }
 }

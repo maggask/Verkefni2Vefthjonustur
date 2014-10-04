@@ -35,7 +35,7 @@ namespace CoursesAPI.Controllers
         /// <param name="model"></param>
         /// <returns>Returns the project that was created.</returns>
         [HttpPost]
-        [Route("")]
+        [Route("PostProject")]
         public Project PostProject(ProjectCreateViewModel model)
         {
            return _service.AddProject(model);
@@ -49,7 +49,7 @@ namespace CoursesAPI.Controllers
         /// <param name="model"></param>
         /// <returns>Returns the grade that was given.</returns>
         [HttpPost]
-        [Route("")]
+        [Route("PostGrade")]
         public Grade PostGrade(GradeCreateViewModel model)
         {
             return _service.AddGrade(model);
@@ -63,7 +63,7 @@ namespace CoursesAPI.Controllers
         /// <param name="model"></param>
         /// <returns>Returns the group that was created.</returns>
         [HttpPost]
-        [Route("")]
+        [Route("PostProjectGroup")]
         public ProjectGroup PostProjectGroup(ProjectGroupCreateViewModel model)
         {
             return _service.AddProjectGroup(model);
@@ -119,9 +119,21 @@ namespace CoursesAPI.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("GetFinalRankings/{studentID}")]
-        public String GetFinalRankings(String studentID)
+        public String GetFinalRankings(int courseInstanceID, String studentID)
         {
-            return _service.GetFinalRankings(studentID);
+            return _service.GetFinalRankings(courseInstanceID, studentID);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetAllGradesByStudent/{studentID}")]
+        public List<float> GetAllGradesByStudent(String studentID)
+        {
+            return _service.GetAllGradesByStudent(studentID);
         }
     }
 }
