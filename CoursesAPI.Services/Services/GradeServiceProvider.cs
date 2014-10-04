@@ -140,7 +140,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
-        public float GetFinalGrade(String studentID)
+        public float GetCurrentFinalGrade(String studentID)
         {
             float finalGrade = 0;
 
@@ -265,7 +265,7 @@ namespace CoursesAPI.Services.Services
 
             foreach (var p in _persons.All())
             {
-                allFinalGradesInOrder.Add(GetFinalGrade(p.SSN));
+                allFinalGradesInOrder.Add(GetCurrentFinalGrade(p.SSN));
             }
 
             return allFinalGradesInOrder;
@@ -280,13 +280,70 @@ namespace CoursesAPI.Services.Services
         public String GetFinalRankings(String studentID)
         {
             var allGrades = AllFinalGradesInOrder();
-            var grade = GetFinalGrade(studentID);
+            var grade = GetCurrentFinalGrade(studentID);
 
             int standing = allGrades.BinarySearch(grade) + 1;
 
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
             return rankings;
+        }
+
+        public String GetFinalGrade(int courseInstanceID, String studentID)
+        {
+            String passed = "";
+
+            var checkIfFailed = (from p in _projects.All()
+                                         where p.CourseInstanceID == courseInstanceID
+                                               && p.MinGradeToPassCourse != null
+                                         select p).ToList();
+
+            float finalGrade = GetCurrentFinalGrade(studentID);
+            float totalPossibleGrade = ((from p in _projects.All()
+                                      where p.CourseInstanceID == courseInstanceID
+                                            && p.ProjectGroupID == null
+                                       select p.Weight).ToList()).Sum();
+            
+            var groupGrade = (from p in _projects.All()
+                         where p.CourseInstanceID == courseInstanceID
+                               && p.ProjectGroupID != null
+                         select p).ToList();
+
+            float previous = -1;
+
+            foreach (var p in groupGrade)
+            {
+                if (p.ProjectGroupID == previous)
+                {
+                    continue;
+                }
+                var count = (from pg in _projectGroups.All()
+                         where pg.ID == p.ProjectGroupID
+                         select pg.GradedProjectsCount).FirstOrDefault();
+
+                totalPossibleGrade += p.Weight * count;
+                previous = p.ProjectGroupID.GetValueOrDefault();
+            }
+
+            float factor = ((float)100 / totalPossibleGrade);
+            finalGrade = finalGrade * factor;
+            finalGrade = finalGrade * 2;
+            var fin = (Math.Round(System.Convert.ToDouble(finalGrade), MidpointRounding.AwayFromZero)) / 2;
+
+            if (fin >= 5)
+            {
+                passed = "Passed";
+            }
+            else
+            {
+                passed = "Failed";
+            }
+
+            if (fin > 10)
+            {
+                fin = 10;
+            }
+            return ( fin.ToString()+ "   " + passed);
         }
     }
 }

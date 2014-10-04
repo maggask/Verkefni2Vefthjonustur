@@ -91,9 +91,9 @@ namespace CoursesAPI.Controllers
         /// <returns>Returns the final grade in a course or current grade.</returns>
         [HttpGet]
         [Route("GetFinalGrade/{studentID}")]
-        public float GetFinalGrade(String studentID)
+        public String GetFinalGrade(int courseInstanceID, String studentID)
         {
-            return _service.GetFinalGrade(studentID);
+            return _service.GetFinalGrade(courseInstanceID, studentID);
         }
 
         /// <summary>
