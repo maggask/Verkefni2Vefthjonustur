@@ -358,9 +358,25 @@ namespace CoursesAPI.Services.Services
 
         public List<float> GetAllGradesByStudent(String studentID)
         {
-            var allGrades =(from g in _grades.All()
-                                    where g.PersonID == studentID
-                                    select g.StudentGrade).ToList();
+            var allGrades = (from g in _grades.All()
+                            where g.PersonID == studentID
+                            select g.StudentGrade).ToList();
+
+            return allGrades;
+        }
+
+        //TODO halda áfram með þetta
+        public List<String> AllGradesInCourse(int courseInstanceID)
+        {
+            List<String> allGrades = (from g in _grades.All()
+                                      select g.StudentGrade.ToString() + g.PersonID).ToList();
+
+            foreach(var p in _projects.All())
+            {
+                var temp = (from g in _grades.All()
+                            select g.StudentGrade.ToString() + g.PersonID).ToList();
+            }
+            
 
             return allGrades;
         }
