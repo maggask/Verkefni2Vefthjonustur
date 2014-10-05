@@ -93,6 +93,7 @@ namespace CoursesAPI.Controllers
         /// student or the current grade.
         /// </summary>
         /// <param name="studentID"></param>
+        /// <param name="courseInstanceID"></param>
         /// <returns>Returns the final grade in a course or current grade.</returns>
         [Authorize(Roles="student,teacher")]
         [HttpGet]
@@ -122,7 +123,7 @@ namespace CoursesAPI.Controllers
         /// among others in a given course.
         /// </summary>
         /// <param name="studentID"></param>
-        /// <param name="projectID"></param>
+        /// <param name="courseInstanceID"></param>
         /// <returns></returns>
         [Authorize(Roles="student,teacher")]
         [HttpGet]

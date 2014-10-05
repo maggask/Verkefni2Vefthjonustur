@@ -563,6 +563,7 @@
             student or the current grade.
             </summary>
             <param name="studentID"></param>
+            <param name="courseInstanceID"></param>
             <returns>Returns the final grade in a course or current grade.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.GradeController.GetProjectRankings(System.String,System.Int32)">
@@ -580,7 +581,7 @@
             among others in a given course.
             </summary>
             <param name="studentID"></param>
-            <param name="projectID"></param>
+            <param name="courseInstanceID"></param>
             <returns></returns>
         </member>
         <member name="M:CoursesAPI.Controllers.GradeController.GetAllGradesByStudent(System.String)">
@@ -590,14 +591,14 @@
             <param name="studentID"></param>
             <returns></returns>
         </member>
-        <member name="M:CoursesAPI.Controllers.GradeController.ProjectOverView(System.Int32)">
+        <member name="M:CoursesAPI.Controllers.GradeController.GetProjectOverView(System.Int32)">
             <summary>
             Returns a list of all students and there grade for the given project
             </summary>
             <param name="projectID"></param>
             <returns></returns>
         </member>
-        <member name="M:CoursesAPI.Controllers.GradeController.FinalGradeOverView(System.Int32)">
+        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalGradeOverView(System.Int32)">
             <summary>
             Returns a list with all student names and there grade in a current course
             </summary>
