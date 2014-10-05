@@ -40,7 +40,7 @@ namespace CoursesAPI.Controllers
         [Route("PostProject")]
         public Project PostProject(ProjectCreateViewModel model)
         {
-           return _service.AddProject(model);
+            return _service.AddProject(model);
         }
 
         /// <summary>

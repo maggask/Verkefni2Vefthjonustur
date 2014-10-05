@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,14 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The project name, e.g lokapróf, skilaverkefni...
         /// </summary>
+        [Required]
         public String   Name                     { get; set; }
 
         /// <summary>
         /// Weight of the project, 5 for 5%, 10 for 10% ect.
         /// </summary>
+        [Required]
+        [Range(0, 100)]
         public int      Weight                   { get; set; }
 
         /// <summary>
@@ -26,6 +30,7 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The instance ID of the given course.
         /// </summary>
+        [Required]
         public int      CourseInstanceID         { get; set; }
 
         /// <summary>

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoursesAPI.Services.Helpers;
 
 namespace CoursesAPI.Services.Services
 {
@@ -42,6 +43,8 @@ namespace CoursesAPI.Services.Services
         /// <returns></returns>
         public Project AddProject(ProjectCreateViewModel model)
         {
+            CourseAPIValidation.Validate(model);
+
             var p = new Project
             {
                 Name = model.Name,
@@ -66,6 +69,8 @@ namespace CoursesAPI.Services.Services
         /// <returns></returns>
         public Grade AddGrade(GradeCreateViewModel model)
         {
+            CourseAPIValidation.Validate(model);
+
             var weight = (from w in _projects.All()
                           where w.ID == model.ProjectID
                           select w.Weight).SingleOrDefault();
@@ -92,6 +97,8 @@ namespace CoursesAPI.Services.Services
         /// <returns></returns>
         public ProjectGroup AddProjectGroup(ProjectGroupCreateViewModel model)
         {
+            CourseAPIValidation.Validate(model);
+
             var pg = new ProjectGroup
             {
                 Name = model.Name,
@@ -239,7 +246,9 @@ namespace CoursesAPI.Services.Services
         }
 
         /// <summary>
-        /// 
+        /// Gets a students project grade ranking
+        /// among others in a given course. If you have the 
+        /// same grade as others you wont get a precise ranking.
         /// </summary>
         /// <param name="studentID"></param>
         /// <param name="projectID"></param>
@@ -265,17 +274,23 @@ namespace CoursesAPI.Services.Services
         {
             List<float> allFinalGradesInOrder = new List<float>();
 
-            foreach (var p in _persons.All())
+            var allPersons = (from p in _persons.All()
+                              select p).ToList();
+
+            foreach (var p in allPersons)
             {
                 allFinalGradesInOrder.Add(GetCurrentFinalGrade(courseInstanceID, p.SSN));
             }
+
+            allFinalGradesInOrder.Sort();
 
             return allFinalGradesInOrder;
         }
 
         /// <summary>
         /// Gets a students final grade ranking
-        /// among others in a given course.
+        /// among others in a given course. If you have the 
+        /// same grade as others you wont get a precise ranking
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
@@ -284,8 +299,7 @@ namespace CoursesAPI.Services.Services
             var allGrades = AllFinalGradesInOrder(courseInstanceID);
             var grade = GetCurrentFinalGrade(courseInstanceID, studentID);
 
-            int standing = allGrades.BinarySearch(grade) + 1;
-
+            int standing = (allGrades.Count() - (allGrades.BinarySearch(grade)));
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
             return rankings;

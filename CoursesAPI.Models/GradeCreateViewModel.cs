@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,13 @@ namespace CoursesAPI.Models
         /// <summary>
         /// Instance ID of the project involved.
         /// </summary>
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "NameRequired")]
         public int ProjectID { get; set; }
 
         /// <summary>
         /// The students grade in a project involved.
         /// </summary>
+        [Required]
         public float StudentGrade { get; set; }
 
         /// <summary>
@@ -26,6 +29,7 @@ namespace CoursesAPI.Models
         /// <summary>
         /// Instance ID of the person involved.
         /// </summary>
+        [Required]
         public string PersonID { get; set; }
     }
 }
