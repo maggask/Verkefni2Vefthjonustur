@@ -292,6 +292,12 @@ namespace CoursesAPI.Services.Services
             return rankings;
         }
 
+        /// <summary>
+        /// Gets a students final grade in the given course
+        /// </summary>
+        /// <param name="courseInstanceID"></param>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
         public String GetFinalGrade(int courseInstanceID, String studentID)
         {
             String passed = "";
@@ -353,9 +359,14 @@ namespace CoursesAPI.Services.Services
             {
                 fin = 10;
             }
-            return ( fin.ToString()+ "   " + passed);
+            return ( fin.ToString()+ " - " + passed);
         }
 
+        /// <summary>
+        /// Returns all grades for a single student
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
         public List<float> GetAllGradesByStudent(String studentID)
         {
             var allGrades = (from g in _grades.All()
@@ -365,7 +376,13 @@ namespace CoursesAPI.Services.Services
             return allGrades;
         }
 
-        public List<String> ProjectOverView(int courseInstanceID, int projectID)
+        /// <summary>
+        /// Returns a list of all students and there grade for the given project
+        /// </summary>
+        /// <param name="courseInstanceID"></param>
+        /// <param name="projectID"></param>
+        /// <returns></returns>
+        public List<String> ProjectOverView(int projectID)
         {
             var allGrades = (from g in _grades.All()
                         join per in _persons.All() on g.PersonID equals per.SSN
@@ -375,6 +392,11 @@ namespace CoursesAPI.Services.Services
             return allGrades;
         }
 
+        /// <summary>
+        /// Returns a list with all student names and there grade in a current course
+        /// </summary>
+        /// <param name="courseInstanceID"></param>
+        /// <returns></returns>
         public List<String> FinalGradeOverView(int courseInstanceID)
         {
             List<String> allGrades = new List<String>();

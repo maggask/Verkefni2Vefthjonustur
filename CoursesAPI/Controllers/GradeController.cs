@@ -125,7 +125,7 @@ namespace CoursesAPI.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Returns all grades for a single student
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
@@ -136,13 +136,23 @@ namespace CoursesAPI.Controllers
             return _service.GetAllGradesByStudent(studentID);
         }
 
+        /// <summary>
+        /// Returns a list of all students and there grade for the given project
+        /// </summary>
+        /// <param name="projectID"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("ProjectOverView/{projectID}")]
-        public List<String> ProjectOverView(int courseInstanceID, int projectID)
+        public List<String> ProjectOverView(int projectID)
         {
-            return _service. ProjectOverView(courseInstanceID, projectID);
+            return _service. ProjectOverView(projectID);
         }
 
+        /// <summary>
+        /// Returns a list with all student names and there grade in a current course
+        /// </summary>
+        /// <param name="courseInstanceID"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("FinalGradeOverView")]
         public List<String> FinalGradeOverView(int courseInstanceID)
