@@ -7,7 +7,11 @@ using CoursesAPI.Services.Models.Entities;
 
 namespace CoursesAPI.Tests.Services
 {
-	[TestClass]
+	/// <summary>
+	/// Test class that runs test for
+    /// GradeServiceProvider..
+	/// </summary>
+    [TestClass]
 	public class GradeServicesTests
 	{
         private GradeServiceProvider _service;
@@ -93,6 +97,9 @@ namespace CoursesAPI.Tests.Services
             Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
         }
 
+        /// <summary>
+        /// Test to get project group grade.
+        /// </summary>
         [TestMethod]
         public void GradeTestGetProjectGroupGrade()
         {
@@ -108,11 +115,13 @@ namespace CoursesAPI.Tests.Services
             Assert.AreEqual(fin, grade);
         }
 
+        /// <summary>
+        /// Test to get project grade.
+        /// </summary>
         [TestMethod]
         public void GradeTestGetGrade()
         {
             // Arrange:
-
             const String studentID = "1309862429";
             const int theGrade = 10; 
 
@@ -123,6 +132,9 @@ namespace CoursesAPI.Tests.Services
             Assert.AreEqual(grade, theGrade);
         }
 
+        /// <summary>
+        /// Test to get final course grade.
+        /// </summary>
         [TestMethod]
         public void GradeTestGetFinalGrade()
         {
@@ -137,6 +149,10 @@ namespace CoursesAPI.Tests.Services
             Assert.AreEqual(finalGrade, gradePassed); 
         }
 
+        /// <summary>
+        /// Test to get a stundents ranking
+        /// in a given project.
+        /// </summary>
         [TestMethod]
         public void GradeTestGetProjectRankings()
         {
@@ -157,6 +173,10 @@ namespace CoursesAPI.Tests.Services
             Assert.AreEqual(second, 1); //búa til annan notanda
         }
 
+        /// <summary>
+        /// Test to get the final ranking of
+        /// a student amongst peers.
+        /// </summary>
         [TestMethod]
         public void GradeTestGetFinalRankings()
         {

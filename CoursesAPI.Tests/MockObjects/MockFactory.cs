@@ -25,12 +25,9 @@ namespace CoursesAPI.Tests.MockObjects
             #region Grade service provider test
             #region List instances
             var personList = new List<Person>();
-            var courseInstanceList = new List<CourseInstance>();
-            var courseTemplateList = new List<CourseTemplate>();
             var gradesList = new List<Grade>();
             var projectList = new List<Project>();
             var projectGroupList = new List<ProjectGroup>();
-            var semesterList = new List<Semester>();
             #endregion
 
             #region Mock data - Persons
@@ -258,22 +255,19 @@ namespace CoursesAPI.Tests.MockObjects
             });
             #endregion
 
-            #region Mock data - Semester
-
-
-
-            #endregion
-
-
             _repositories.Add(typeof(Person), personList);
-            _repositories.Add(typeof(CourseInstance), courseInstanceList);
-            _repositories.Add(typeof(CourseTemplate), courseTemplateList);
             _repositories.Add(typeof(Grade), gradesList);
             _repositories.Add(typeof(Project), projectList);
             _repositories.Add(typeof(ProjectGroup), projectGroupList);
-            _repositories.Add(typeof(Semester), semesterList);
             #endregion
         }
+
+        /// <summary>
+        /// Allows the data from MockFactory to be accessible
+        /// in GradeServiceTests.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public List<T> GetMock<T>() where T : class
         {
             if (_repositories.Keys.Contains(typeof(T)))
