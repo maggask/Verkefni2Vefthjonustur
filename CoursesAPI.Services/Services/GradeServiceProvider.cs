@@ -118,7 +118,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        public float GetGroupGrade(int ID, String studentID)
+        public float GetProjectGroupGrade(int ID, String studentID)
         {
             var theGroup = (from h in _projectGroups.All()
                            where (h.ID == ID)

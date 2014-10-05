@@ -75,7 +75,7 @@ namespace CoursesAPI.Tests.MockObjects
             {
                 ID = 2,
                 ProjectID = 2,
-                StudentGrade = 7,
+                StudentGrade = 10,
                 WeightedStudentGrade = 3,
                 PersonID = "1303922299",
 
@@ -84,7 +84,7 @@ namespace CoursesAPI.Tests.MockObjects
             {
                 ID = 3,
                 ProjectID = 5,
-                StudentGrade = 5,
+                StudentGrade = 10,
                 WeightedStudentGrade = 1,
                 PersonID = "1303922299",
 
@@ -103,7 +103,7 @@ namespace CoursesAPI.Tests.MockObjects
             {
                 ID = 5,
                 ProjectID = 2,
-                StudentGrade = 9,
+                StudentGrade = 5,
                 WeightedStudentGrade = 3,
                 PersonID = "1309862429",
 

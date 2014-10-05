@@ -94,17 +94,19 @@ namespace CoursesAPI.Tests.Services
         }
 
         [TestMethod]
-        public void GradeTestGetGroupGrade()
+        public void GradeTestGetProjectGroupGrade()
         {
 
             // Arrange:
 
+            const Double grade = 0.12;
+            const String studentID = "2411903079";
+
             // Act:
-            var groupGrade = _service.GetGroupGrade(1, "2411903079");
+            var groupGrade = _service.GetProjectGroupGrade(1, studentID);
             // Assert
 
-            Assert.AreEqual(groupGrade, 0.12);
-            Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
+            Assert.AreEqual(groupGrade, grade);
 
         }
 
@@ -118,22 +120,22 @@ namespace CoursesAPI.Tests.Services
 
 
             // Assert
-            Assert.AreEqual(grade, 8);
-            Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
+            Assert.AreEqual(grade, 6);
+         
 
         }
 
         [TestMethod]
-        public void GradeTestGetFinaleGrade()
+        public void GradeTestGetFinalGrade()
         {
             // Arrange:
              
             //Act:
-            var finalGrade = _service.GetFinalGrade("1309862429");
+            var finalGrade = _service.GetFinalGrade(1, "1309862429");
 
             // Assert
             Assert.AreEqual(finalGrade, 7.5); 
-           // Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
+           
 
         }
 
@@ -155,7 +157,6 @@ namespace CoursesAPI.Tests.Services
             // Assert
             
             Assert.IsTrue(first > second);
-           // Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
 
         }
 
@@ -163,8 +164,8 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetFinalRankings()
         {
             // Arrange:
-            var finalRankingsFirst = _service.GetFinalRankings("1303922299");
-            var finalRankingsSecond = _service.GetFinalRankings("1309862429");
+            var finalRankingsFirst = _service.GetFinalRankings(1, "1303922299");
+            var finalRankingsSecond = _service.GetFinalRankings(1, "1309862429");
 
             char[] split = { '/' };
 
@@ -176,8 +177,8 @@ namespace CoursesAPI.Tests.Services
             //Act:
            
             // Assert
-            Assert.IsTrue(first > second);
-          //  Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
+            //Assert.IsTrue(first > second);
+            Assert.AreEqual(first, second + 1);
 
         }
 
