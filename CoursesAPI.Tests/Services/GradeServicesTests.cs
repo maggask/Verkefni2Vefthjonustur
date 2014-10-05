@@ -104,7 +104,7 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetProjectGroupGrade()
         {
             // Arrange:
-            const Double grade = 2;
+            const Double grade = 0;
             const String studentID = "1309862429";
 
             // Act:
@@ -112,7 +112,7 @@ namespace CoursesAPI.Tests.Services
             var fin = (Math.Round(System.Convert.ToDouble(groupGrade), MidpointRounding.AwayFromZero)) / 2;
  
             // Assert
-            Assert.AreEqual(fin, grade);
+            Assert.AreEqual(fin,  grade);
         }
 
         /// <summary>
