@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CoursesAPI.Tests.MockObjects;
 using CoursesAPI.Services.Services;
 using CoursesAPI.Models;
+using CoursesAPI.Services.Models.Entities;
 
 namespace CoursesAPI.Tests.Services
 {
@@ -19,6 +20,8 @@ namespace CoursesAPI.Tests.Services
             _mockUow = new MockUnitOfWork<MockDataContext>();
             _mockFactory = new MockFactory();
             _service = new GradeServiceProvider(_mockUow);
+
+            _mockUow.SetRepositoryData(_mockFactory.GetMock<Grade>());
 		}
 
         /// <summary>

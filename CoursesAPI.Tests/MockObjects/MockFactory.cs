@@ -220,5 +220,14 @@ namespace CoursesAPI.Tests.MockObjects
             _repositories.Add(typeof(Semester), semesterList);
             #endregion
         }
+        public List<T> GetMock<T>() where T : class
+        {
+            if (_repositories.Keys.Contains(typeof(T)))
+            {
+                return _repositories[typeof(T)] as List<T>;
+            }
+
+            return null;
+        }
     }
 }
