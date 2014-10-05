@@ -100,7 +100,7 @@ namespace CoursesAPI.Tests.Services
         /// <summary>
         /// Test to get project group grade.
         /// </summary>
-        [TestMethod]
+        [TestMethod] // Þetta test þarf að laga
         public void GradeTestGetProjectGroupGrade()
         {
             // Arrange:
