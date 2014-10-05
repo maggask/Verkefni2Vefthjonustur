@@ -365,18 +365,26 @@ namespace CoursesAPI.Services.Services
             return allGrades;
         }
 
-        //TODO halda áfram með þetta
-        public List<String> AllGradesInCourse(int courseInstanceID)
+        public List<String> ProjectOverView(int courseInstanceID, int projectID)
         {
-            List<String> allGrades = (from g in _grades.All()
-                                      select g.StudentGrade.ToString() + g.PersonID).ToList();
+            var allGrades = (from g in _grades.All()
+                        join per in _persons.All() on g.PersonID equals per.SSN
+                        where g.ProjectID == projectID
+                        select per.Name.ToString()+ " - " + g.StudentGrade.ToString()).ToList();
 
-            foreach(var p in _projects.All())
+            return allGrades;
+        }
+
+        public List<String> FinalGradeOverView(int courseInstanceID)
+        {
+            List<String> allGrades = new List<String>();
+            var allPersons = (from p in _persons.All()
+                              select p).ToList();
+            foreach(var p in allPersons)
             {
-                var temp = (from g in _grades.All()
-                            select g.StudentGrade.ToString() + g.PersonID).ToList();
+                String temp = GetFinalGrade(courseInstanceID, p.SSN);
+                allGrades.Add(p.Name + " - " + temp);
             }
-            
 
             return allGrades;
         }

@@ -135,5 +135,19 @@ namespace CoursesAPI.Controllers
         {
             return _service.GetAllGradesByStudent(studentID);
         }
+
+        [HttpGet]
+        [Route("ProjectOverView/{projectID}")]
+        public List<String> ProjectOverView(int courseInstanceID, int projectID)
+        {
+            return _service. ProjectOverView(courseInstanceID, projectID);
+        }
+
+        [HttpGet]
+        [Route("FinalGradeOverView")]
+        public List<String> FinalGradeOverView(int courseInstanceID)
+        {
+            return _service.FinalGradeOverView(courseInstanceID);
+        }
     }
 }
