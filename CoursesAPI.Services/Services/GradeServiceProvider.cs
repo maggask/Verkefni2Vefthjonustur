@@ -242,6 +242,7 @@ namespace CoursesAPI.Services.Services
                              where g.ProjectID == projectID
                              orderby g.StudentGrade descending
                              select g.StudentGrade).ToList();
+
             return allGrades;
         }
 
