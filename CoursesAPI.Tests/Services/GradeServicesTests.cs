@@ -22,6 +22,8 @@ namespace CoursesAPI.Tests.Services
             _service = new GradeServiceProvider(_mockUow);
 
             _mockUow.SetRepositoryData(_mockFactory.GetMock<Grade>());
+            _mockUow.SetRepositoryData(_mockFactory.GetMock<Project>());
+            _mockUow.SetRepositoryData(_mockFactory.GetMock<ProjectGroup>());
 		}
 
         /// <summary>
@@ -70,6 +72,9 @@ namespace CoursesAPI.Tests.Services
             Assert.IsTrue(_mockUow.GetSaveCallCount() > 0);
         }
 
+        /// <summary>
+        /// Test to add a new project group.
+        /// </summary>
         [TestMethod]
         public void GradeTestAddNewProjectGroup()
         {

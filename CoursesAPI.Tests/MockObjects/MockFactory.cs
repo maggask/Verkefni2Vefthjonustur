@@ -181,8 +181,6 @@ namespace CoursesAPI.Tests.MockObjects
                 MinGradeToPassCourse = null,
 
             });
-
-
             #endregion
 
             #region Mock data - ProjectGroup
@@ -201,7 +199,6 @@ namespace CoursesAPI.Tests.MockObjects
                 GradedProjectsCount = 4,
 
             });
-
             #endregion
 
             #region Mock data - Semester
