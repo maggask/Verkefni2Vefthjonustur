@@ -299,7 +299,7 @@ namespace CoursesAPI.Services.Services
             var allGrades = AllFinalGradesInOrder(courseInstanceID);
             var grade = GetCurrentFinalGrade(courseInstanceID, studentID);
 
-            int standing = (allGrades.Count() - (allGrades.BinarySearch(grade)));
+            int standing = (allGrades.Count() - allGrades.BinarySearch(grade));
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
             return rankings;
