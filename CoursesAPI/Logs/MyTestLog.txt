@@ -1720,3 +1720,787 @@ NotFound - Content-type='application/json; charset=utf-8', content-length=unknow
 0 - 
 0 - 
 0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/__browserLink/requestData/531500ceb62f49af9fd0660fbc68101a?version=2
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/PostProject
+0 - Route='controller:courses,id:PostProject'
+0 - Courses
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.CoursesController
+0 - CoursesAPI.Controllers.CoursesController
+0 - 
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+NotFound - UserMessage='No HTTP resource was found that matches the request URI 'http://localhost:12298/api/courses/PostProject'.', MessageDetail='No action was found on the controller 'Courses' that matches the request.'
+NotFound - UserMessage='No HTTP resource was found that matches the request URI 'http://localhost:12298/api/courses/PostProject'.', MessageDetail='No action was found on the controller 'Courses' that matches the request.'
+NotFound - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/xml; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/PostProject
+0 - Route='controller:courses,id:PostProject'
+0 - Courses
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.CoursesController
+0 - CoursesAPI.Controllers.CoursesController
+0 - 
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - UserMessage='No HTTP resource was found that matches the request URI 'http://localhost:12298/api/courses/PostProject'.', MessageDetail='No action was found on the controller 'Courses' that matches the request.'
+NotFound - UserMessage='No HTTP resource was found that matches the request URI 'http://localhost:12298/api/courses/PostProject'.', MessageDetail='No action was found on the controller 'Courses' that matches the request.'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+Unauthorized - 
+Unauthorized - 
+Unauthorized - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+Unauthorized - 
+Unauthorized - 
+Unauthorized - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'XmlMediaTypeFormatter' for type='HttpError', mediaType='application/xml; charset=utf-8'
+0 - Will use same 'XmlMediaTypeFormatter' formatter
+0 - Selected formatter='XmlMediaTypeFormatter', content-type='application/xml; charset=utf-8'
+MethodNotAllowed - UserMessage='The requested resource does not support http method 'GET'.'
+MethodNotAllowed - UserMessage='The requested resource does not support http method 'GET'.'
+MethodNotAllowed - Content-type='application/xml; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/xml; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+UnsupportedMediaType - UserMessage='The request entity's media type 'multipart/form-data' is not supported for this resource.', ExceptionType='System.Net.Http.UnsupportedMediaTypeException', ExceptionMessage='No MediaTypeFormatter is available to read an object of type 'ProjectCreateViewModel' from content with media type 'multipart/form-data'.', StackTrace=   at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   at System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+UnsupportedMediaType - UserMessage='The request entity's media type 'multipart/form-data' is not supported for this resource.', ExceptionType='System.Net.Http.UnsupportedMediaTypeException', ExceptionMessage='No MediaTypeFormatter is available to read an object of type 'ProjectCreateViewModel' from content with media type 'multipart/form-data'.', StackTrace=   at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   at System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+0 - 
+0 - 
+UnsupportedMediaType - UserMessage='The request entity's media type 'multipart/form-data' is not supported for this resource.', ExceptionType='System.Net.Http.UnsupportedMediaTypeException', ExceptionMessage='No MediaTypeFormatter is available to read an object of type 'ProjectCreateViewModel' from content with media type 'multipart/form-data'.', StackTrace=   at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   at System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+UnsupportedMediaType - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+UnsupportedMediaType - UserMessage='The request entity's media type 'text/plain' is not supported for this resource.', ExceptionType='System.Net.Http.UnsupportedMediaTypeException', ExceptionMessage='No MediaTypeFormatter is available to read an object of type 'ProjectCreateViewModel' from content with media type 'text/plain'.', StackTrace=   at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   at System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+UnsupportedMediaType - UserMessage='The request entity's media type 'text/plain' is not supported for this resource.', ExceptionType='System.Net.Http.UnsupportedMediaTypeException', ExceptionMessage='No MediaTypeFormatter is available to read an object of type 'ProjectCreateViewModel' from content with media type 'text/plain'.', StackTrace=   at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   at System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+0 - 
+0 - 
+UnsupportedMediaType - UserMessage='The request entity's media type 'text/plain' is not supported for this resource.', ExceptionType='System.Net.Http.UnsupportedMediaTypeException', ExceptionMessage='No MediaTypeFormatter is available to read an object of type 'ProjectCreateViewModel' from content with media type 'text/plain'.', StackTrace=   at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   at System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+UnsupportedMediaType - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='ProjectCreateViewModel', content-type='application/json'
+0 - Value read='CoursesAPI.Models.ProjectCreateViewModel'
+0 - Parameter 'model' bound to the value 'CoursesAPI.Models.ProjectCreateViewModel'
+0 - Model state is valid. Values: model=CoursesAPI.Models.ProjectCreateViewModel
+0 - Action='PostProject(model=CoursesAPI.Models.ProjectCreateViewModel)'
+0 - Invoking action 'PostProject(model=CoursesAPI.Models.ProjectCreateViewModel)'
+0 - Action returned 'CoursesAPI.Services.Models.Entities.Project'
+0 - Type='Project', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Project', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='CoursesAPI.Services.Models.Entities.Project', type='Project', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='ProjectCreateViewModel', content-type='application/json'
+0 - Value read='CoursesAPI.Models.ProjectCreateViewModel'
+0 - Parameter 'model' bound to the value 'CoursesAPI.Models.ProjectCreateViewModel'
+0 - Model state is valid. Values: model=CoursesAPI.Models.ProjectCreateViewModel
+0 - Action='PostProject(model=CoursesAPI.Models.ProjectCreateViewModel)'
+0 - Invoking action 'PostProject(model=CoursesAPI.Models.ProjectCreateViewModel)'
+0 - Action returned 'CoursesAPI.Services.Models.Entities.Project'
+0 - Type='Project', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Project', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='CoursesAPI.Services.Models.Entities.Project', type='Project', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProject
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProject(ProjectCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='ProjectCreateViewModel', content-type='application/json'
+0 - Value read='CoursesAPI.Models.ProjectCreateViewModel'
+0 - Parameter 'model' bound to the value 'CoursesAPI.Models.ProjectCreateViewModel'
+0 - Model state is valid. Values: model=CoursesAPI.Models.ProjectCreateViewModel
+0 - Action='PostProject(model=CoursesAPI.Models.ProjectCreateViewModel)'
+0 - Invoking action 'PostProject(model=CoursesAPI.Models.ProjectCreateViewModel)'
+0 - Action returned 'CoursesAPI.Services.Models.Entities.Project'
+0 - Type='Project', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Project', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='CoursesAPI.Services.Models.Entities.Project', type='Project', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostGrade
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostGrade(GradeCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='GradeCreateViewModel', content-type='application/json'
+0 - Value read='CoursesAPI.Models.GradeCreateViewModel'
+0 - Parameter 'model' bound to the value 'CoursesAPI.Models.GradeCreateViewModel'
+0 - Model state is valid. Values: model=CoursesAPI.Models.GradeCreateViewModel
+0 - Action='PostGrade(model=CoursesAPI.Models.GradeCreateViewModel)'
+0 - Invoking action 'PostGrade(model=CoursesAPI.Models.GradeCreateViewModel)'
+0 - Action returned 'CoursesAPI.Services.Models.Entities.Grade'
+0 - Type='Grade', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Grade', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='CoursesAPI.Services.Models.Entities.Grade', type='Grade', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostGrade
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostGrade(GradeCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+Unauthorized - 
+Unauthorized - 
+Unauthorized - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Web.Http.HttpError', type='HttpError', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/PostProjectGroup
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'PostProjectGroup(ProjectGroupCreateViewModel model)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'model'
+0 - Type='ProjectGroupCreateViewModel', content-type='application/json'
+0 - Value read='CoursesAPI.Models.ProjectGroupCreateViewModel'
+0 - Parameter 'model' bound to the value 'CoursesAPI.Models.ProjectGroupCreateViewModel'
+0 - Model state is valid. Values: model=CoursesAPI.Models.ProjectGroupCreateViewModel
+0 - Action='PostProjectGroup(model=CoursesAPI.Models.ProjectGroupCreateViewModel)'
+0 - Invoking action 'PostProjectGroup(model=CoursesAPI.Models.ProjectGroupCreateViewModel)'
+0 - Action returned 'CoursesAPI.Services.Models.Entities.ProjectGroup'
+0 - Type='ProjectGroup', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='ProjectGroup', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='CoursesAPI.Services.Models.Entities.ProjectGroup', type='ProjectGroup', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetGrade/3/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetGrade(Int32 projectID, String studentID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '3'
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: projectID=3, studentID=1309862429
+0 - Action='GetGrade(projectID=3, studentID=1309862429)'
+0 - Invoking action 'GetGrade(projectID=3, studentID=1309862429)'
+0 - Action returned '9'
+0 - Type='Single', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Single', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='9', type='Single', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetFinalGrade/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalGrade(Int32 courseInstanceID, String studentID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'courseInstanceID'
+0 - Parameter 'courseInstanceID' bound to the value '1'
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: courseInstanceID=1, studentID=1309862429
+0 - Action='GetFinalGrade(courseInstanceID=1, studentID=1309862429)'
+0 - Invoking action 'GetFinalGrade(courseInstanceID=1, studentID=1309862429)'
+0 - Action returned 'Failed to pass exam'
+0 - Type='String', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='String', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='Failed to pass exam', type='String', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetProjectRankings/1309862429/3
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetProjectRankings(String studentID, Int32 projectID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '3'
+0 - Model state is valid. Values: studentID=1309862429, projectID=3
+0 - Action='GetProjectRankings(studentID=1309862429, projectID=3)'
+0 - Invoking action 'GetProjectRankings(studentID=1309862429, projectID=3)'
+0 - Action returned '1/1'
+0 - Type='String', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='String', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='1/1', type='String', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetProjectRankings/1309862429/2
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetProjectRankings(String studentID, Int32 projectID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '2'
+0 - Model state is valid. Values: studentID=1309862429, projectID=2
+0 - Action='GetProjectRankings(studentID=1309862429, projectID=2)'
+0 - Invoking action 'GetProjectRankings(studentID=1309862429, projectID=2)'
+0 - Action returned '0/2'
+0 - Type='String', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='String', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='0/2', type='String', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetProjectRankings/1309862429/4
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetProjectRankings(String studentID, Int32 projectID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '4'
+0 - Model state is valid. Values: studentID=1309862429, projectID=4
+0 - Action='GetProjectRankings(studentID=1309862429, projectID=4)'
+0 - Invoking action 'GetProjectRankings(studentID=1309862429, projectID=4)'
+0 - Action returned '1/2'
+0 - Type='String', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='String', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='1/2', type='String', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetFinalRankings/1309862429/4
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/GetFinalRankings/1309862429/4
+0 - Type='HttpError', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='HttpError', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+NotFound - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - http://localhost:12298/api/courses/1/GetFinalRankings/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalRankings(Int32 courseInstanceID, String studentID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'courseInstanceID'
+0 - Parameter 'courseInstanceID' bound to the value '1'
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: courseInstanceID=1, studentID=1309862429
+0 - Action='GetFinalRankings(courseInstanceID=1, studentID=1309862429)'
+0 - Invoking action 'GetFinalRankings(courseInstanceID=1, studentID=1309862429)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetFinalRankings/2411903079
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetFinalRankings(Int32 courseInstanceID, String studentID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'courseInstanceID'
+0 - Parameter 'courseInstanceID' bound to the value '1'
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '2411903079'
+0 - Model state is valid. Values: courseInstanceID=1, studentID=2411903079
+0 - Action='GetFinalRankings(courseInstanceID=1, studentID=2411903079)'
+0 - Invoking action 'GetFinalRankings(courseInstanceID=1, studentID=2411903079)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetAllGradesByStudent/2411903079
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetAllGradesByStudent(String studentID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '2411903079'
+0 - Model state is valid. Values: studentID=2411903079
+0 - Action='GetAllGradesByStudent(studentID=2411903079)'
+0 - Invoking action 'GetAllGradesByStudent(studentID=2411903079)'
+0 - Action returned 'System.Collections.Generic.List`1[System.Single]'
+0 - Type='List`1', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='List`1', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Collections.Generic.List`1[System.Single]', type='List`1', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/GetAllGradesByStudent/1309862429
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'GetAllGradesByStudent(String studentID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'studentID'
+0 - Parameter 'studentID' bound to the value '1309862429'
+0 - Model state is valid. Values: studentID=1309862429
+0 - Action='GetAllGradesByStudent(studentID=1309862429)'
+0 - Invoking action 'GetAllGradesByStudent(studentID=1309862429)'
+0 - Action returned 'System.Collections.Generic.List`1[System.Single]'
+0 - Type='List`1', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='List`1', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Collections.Generic.List`1[System.Single]', type='List`1', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/ProjectOverView/3
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'ProjectOverView(Int32 projectID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '3'
+0 - Model state is valid. Values: projectID=3
+0 - Action='ProjectOverView(projectID=3)'
+0 - Invoking action 'ProjectOverView(projectID=3)'
+0 - Action returned 'System.Collections.Generic.List`1[System.String]'
+0 - Type='List`1', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='List`1', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Collections.Generic.List`1[System.String]', type='List`1', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/ProjectOverView/2
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'ProjectOverView(Int32 projectID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'projectID'
+0 - Parameter 'projectID' bound to the value '2'
+0 - Model state is valid. Values: projectID=2
+0 - Action='ProjectOverView(projectID=2)'
+0 - Invoking action 'ProjectOverView(projectID=2)'
+0 - Action returned 'System.Collections.Generic.List`1[System.String]'
+0 - Type='List`1', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='List`1', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Collections.Generic.List`1[System.String]', type='List`1', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 
+0 - http://localhost:12298/api/courses/1/FinalGradeOverView
+0 - Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+0 - Grade
+0 - 
+0 - 
+0 - CoursesAPI.Controllers.GradeController
+0 - CoursesAPI.Controllers.GradeController
+0 - 
+0 - 
+0 - Selected action 'FinalGradeOverView(Int32 courseInstanceID)'
+0 - 
+0 - 
+0 - 
+0 - 
+0 - 
+0 - Binding parameter 'courseInstanceID'
+0 - Parameter 'courseInstanceID' bound to the value '1'
+0 - Model state is valid. Values: courseInstanceID=1
+0 - Action='FinalGradeOverView(courseInstanceID=1)'
+0 - Invoking action 'FinalGradeOverView(courseInstanceID=1)'
+0 - Action returned 'System.Collections.Generic.List`1[System.String]'
+0 - Type='List`1', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+0 - Obtaining formatter of type 'JsonMediaTypeFormatter' for type='List`1', mediaType='application/json; charset=utf-8'
+0 - Will use same 'JsonMediaTypeFormatter' formatter
+0 - Selected formatter='JsonMediaTypeFormatter', content-type='application/json; charset=utf-8'
+OK - 
+OK - 
+OK - Content-type='application/json; charset=utf-8', content-length=unknown
+0 - Value='System.Collections.Generic.List`1[System.String]', type='List`1', content-type='application/json; charset=utf-8'
+0 - 
+0 - 
+0 - 

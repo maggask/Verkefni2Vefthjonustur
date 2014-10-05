@@ -15,6 +15,7 @@ namespace CoursesAPI.Controllers
     /// <summary>
     /// GradeController represents resources belonging to grades.
     /// </summary>
+    [Authorize]
     [RoutePrefix("api/courses/{courseInstanceID}")]
     public class GradeController : ApiController
     {
@@ -34,6 +35,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Returns the project that was created.</returns>
+        [Authorize(Roles="teacher")]
         [HttpPost]
         [Route("PostProject")]
         public Project PostProject(ProjectCreateViewModel model)
@@ -48,6 +50,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Returns the grade that was given.</returns>
+        [Authorize(Roles="teacher")]
         [HttpPost]
         [Route("PostGrade")]
         public Grade PostGrade(GradeCreateViewModel model)
@@ -62,6 +65,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Returns the group that was created.</returns>
+        [Authorize(Roles="teacher")]
         [HttpPost]
         [Route("PostProjectGroup")]
         public ProjectGroup PostProjectGroup(ProjectGroupCreateViewModel model)
@@ -76,6 +80,7 @@ namespace CoursesAPI.Controllers
         /// <param name="projectID"></param>
         /// <param name="studentID"></param>
         /// <returns>Return grade for project.</returns>
+        [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetGrade/{projectID}/{studentID}")]
         public float GetGrade(int projectID, String studentID)
@@ -89,6 +94,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns>Returns the final grade in a course or current grade.</returns>
+        [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetFinalGrade/{studentID}")]
         public String GetFinalGrade(int courseInstanceID, String studentID)
@@ -103,6 +109,7 @@ namespace CoursesAPI.Controllers
         /// <param name="studentID"></param>
         /// <param name="projectID"></param>
         /// <returns></returns>
+        [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetProjectRankings/{studentID}/{projectID}")]
         public String GetProjectRankings(String studentID, int projectID)
@@ -117,6 +124,7 @@ namespace CoursesAPI.Controllers
         /// <param name="studentID"></param>
         /// <param name="projectID"></param>
         /// <returns></returns>
+        [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetFinalRankings/{studentID}")]
         public String GetFinalRankings(int courseInstanceID, String studentID)
@@ -129,6 +137,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
+        [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetAllGradesByStudent/{studentID}")]
         public List<float> GetAllGradesByStudent(String studentID)
@@ -141,11 +150,12 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="projectID"></param>
         /// <returns></returns>
+        [Authorize(Roles="teacher")]
         [HttpGet]
         [Route("ProjectOverView/{projectID}")]
-        public List<String> ProjectOverView(int projectID)
+        public List<String> GetProjectOverView(int projectID)
         {
-            return _service. ProjectOverView(projectID);
+            return _service.GetProjectOverView(projectID);
         }
 
         /// <summary>
@@ -154,10 +164,11 @@ namespace CoursesAPI.Controllers
         /// <param name="courseInstanceID"></param>
         /// <returns></returns>
         [HttpGet]
+        [Authorize(Roles="teacher")]
         [Route("FinalGradeOverView")]
-        public List<String> FinalGradeOverView(int courseInstanceID)
+        public List<String> GetFinalGradeOverView(int courseInstanceID)
         {
-            return _service.FinalGradeOverView(courseInstanceID);
+            return _service.GetFinalGradeOverView(courseInstanceID);
         }
     }
 }

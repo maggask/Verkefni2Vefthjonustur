@@ -557,7 +557,7 @@
             <param name="studentID"></param>
             <returns>Return grade for project.</returns>
         </member>
-        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalGrade(System.String)">
+        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalGrade(System.Int32,System.String)">
             <summary>
             Gets the final grade of a given
             student or the current grade.
@@ -574,13 +574,34 @@
             <param name="projectID"></param>
             <returns></returns>
         </member>
-        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalRankings(System.String)">
+        <member name="M:CoursesAPI.Controllers.GradeController.GetFinalRankings(System.Int32,System.String)">
             <summary>
             Gets a students final grade ranking
             among others in a given course.
             </summary>
             <param name="studentID"></param>
             <param name="projectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.GetAllGradesByStudent(System.String)">
+            <summary>
+            Returns all grades for a single student
+            </summary>
+            <param name="studentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.ProjectOverView(System.Int32)">
+            <summary>
+            Returns a list of all students and there grade for the given project
+            </summary>
+            <param name="projectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.FinalGradeOverView(System.Int32)">
+            <summary>
+            Returns a list with all student names and there grade in a current course
+            </summary>
+            <param name="courseInstanceID"></param>
             <returns></returns>
         </member>
         <member name="T:CoursesAPI.Filters.AppExceptionFilter">

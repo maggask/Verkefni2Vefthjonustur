@@ -94,7 +94,6 @@ namespace CoursesAPI.Services.Services
         {
             var pg = new ProjectGroup
             {
-                ID = model.ID,
                 Name = model.Name,
                 GradedProjectsCount = model.GradedProjectsCount
             };
@@ -382,7 +381,7 @@ namespace CoursesAPI.Services.Services
         /// <param name="courseInstanceID"></param>
         /// <param name="projectID"></param>
         /// <returns></returns>
-        public List<String> ProjectOverView(int projectID)
+        public List<String> GetProjectOverView(int projectID)
         {
             var allGrades = (from g in _grades.All()
                         join per in _persons.All() on g.PersonID equals per.SSN
@@ -397,7 +396,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="courseInstanceID"></param>
         /// <returns></returns>
-        public List<String> FinalGradeOverView(int courseInstanceID)
+        public List<String> GetFinalGradeOverView(int courseInstanceID)
         {
             List<String> allGrades = new List<String>();
             var allPersons = (from p in _persons.All()
