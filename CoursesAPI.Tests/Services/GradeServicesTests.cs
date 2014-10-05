@@ -170,6 +170,7 @@ namespace CoursesAPI.Tests.Services
             string[] getsecond = projectRankingsSecond.Split(split);
             int first = Int32.Parse(getfirst[0]);
             int second = Int32.Parse(getsecond[0]);
+            
             // Assert            
             Assert.IsTrue(first < second);
         }
