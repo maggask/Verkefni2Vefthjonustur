@@ -99,7 +99,7 @@ namespace CoursesAPI.Tests.Services
 
             // Arrange:
 
-            const Double grade = 0.12;
+            const Double grade = 2;
             const String studentID = "2411903079";
 
             // Act:

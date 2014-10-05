@@ -181,7 +181,7 @@ namespace CoursesAPI.Services.Services
                     continue;
                 }
 
-                finalGrade += GetGroupGrade(p.ProjectGroupID.GetValueOrDefault(), studentID);
+                finalGrade += GetProjectGroupGrade(p.ProjectGroupID.GetValueOrDefault(), studentID);
                 previous = p.ProjectGroupID.GetValueOrDefault();
             }
 
