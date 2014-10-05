@@ -96,18 +96,16 @@ namespace CoursesAPI.Tests.Services
         [TestMethod]
         public void GradeTestGetProjectGroupGrade()
         {
-
             // Arrange:
-
             const Double grade = 2;
-            const String studentID = "2411903079";
+            const String studentID = "1309862429";
 
             // Act:
             var groupGrade = _service.GetProjectGroupGrade(1, studentID);
+            var fin = (Math.Round(System.Convert.ToDouble(groupGrade), MidpointRounding.AwayFromZero)) / 2;
+ 
             // Assert
-
-            Assert.AreEqual(groupGrade, grade);
-
+            Assert.AreEqual(fin, grade);
         }
 
         [TestMethod]
@@ -115,28 +113,28 @@ namespace CoursesAPI.Tests.Services
         {
             // Arrange:
 
-            //Act:
-            var grade = _service.GetGrade(1, "1309862429");
+            const String studentID = "1309862429";
+            const int theGrade = 10; 
 
+            //Act:
+            var grade = _service.GetGrade(1, studentID);
 
             // Assert
-            Assert.AreEqual(grade, 6);
-         
-
+            Assert.AreEqual(grade, theGrade);
         }
 
         [TestMethod]
         public void GradeTestGetFinalGrade()
         {
             // Arrange:
+            const String gradePassed = "8 - Passed";
+            const String studentID = "1309862429"; 
              
             //Act:
-            var finalGrade = _service.GetFinalGrade(1, "1309862429");
+            var finalGrade = _service.GetFinalGrade(1, studentID);
 
             // Assert
-            Assert.AreEqual(finalGrade, 7.5); 
-           
-
+            Assert.AreEqual(finalGrade, gradePassed); 
         }
 
         [TestMethod]
@@ -154,10 +152,9 @@ namespace CoursesAPI.Tests.Services
 
             //Act:
 
-            // Assert
-            
-            Assert.IsTrue(first > second);
-
+            // Assert            
+            // Assert.IsTrue(first > second);
+            Assert.AreEqual(second, 1); //búa til annan notanda
         }
 
         [TestMethod]
@@ -177,12 +174,9 @@ namespace CoursesAPI.Tests.Services
             //Act:
            
             // Assert
-            //Assert.IsTrue(first > second);
-            Assert.AreEqual(first, second + 1);
-
+            Assert.IsTrue(first < second);
+          //  Assert.AreEqual(, finalRankingsSecond);
         }
 
-	}
-
-     
+	}     
 }

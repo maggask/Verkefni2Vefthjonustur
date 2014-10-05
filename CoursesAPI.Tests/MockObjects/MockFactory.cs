@@ -65,8 +65,59 @@ namespace CoursesAPI.Tests.MockObjects
             {
                 ID = 1, 
                 ProjectID = 1, 
-                StudentGrade = 10, 
-                WeightedStudentGrade = 2,
+                StudentGrade = 10,
+                WeightedStudentGrade = (float)0.2,
+                PersonID = "1309862429",
+
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 2,
+                ProjectID = 4,
+                StudentGrade = 10,
+                WeightedStudentGrade = (float)0.5,
+                PersonID = "1309862429",
+
+            });
+            gradesList.Add(new Grade
+            {
+                ID = 3,
+                ProjectID = 6,
+                StudentGrade = 10,
+                WeightedStudentGrade = (float)6,
+                PersonID = "1309862429",
+
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 4,
+                ProjectID = 2,
+                StudentGrade = 6,
+                WeightedStudentGrade =(float)0.12,
+                PersonID = "1309862429",
+
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 5,
+                ProjectID = 5,
+                StudentGrade = 3,
+                WeightedStudentGrade = (float)0.93,
+                PersonID = "1309862429",
+
+            });
+        
+            //hallo
+
+            gradesList.Add(new Grade
+            {
+                ID = 1,
+                ProjectID = 1,
+                StudentGrade = 6,
+                WeightedStudentGrade = (float)0.12,
                 PersonID = "1303922299",
 
             });
@@ -74,18 +125,18 @@ namespace CoursesAPI.Tests.MockObjects
             gradesList.Add(new Grade
             {
                 ID = 2,
-                ProjectID = 2,
-                StudentGrade = 10,
-                WeightedStudentGrade = 3,
+                ProjectID = 4,
+                StudentGrade = 5,
+                WeightedStudentGrade = (float)0.25,
                 PersonID = "1303922299",
 
             });
             gradesList.Add(new Grade
             {
                 ID = 3,
-                ProjectID = 5,
-                StudentGrade = 10,
-                WeightedStudentGrade = 1,
+                ProjectID = 6,
+                StudentGrade = 5,
+                WeightedStudentGrade = (float)3,
                 PersonID = "1303922299",
 
             });
@@ -93,31 +144,23 @@ namespace CoursesAPI.Tests.MockObjects
             gradesList.Add(new Grade
             {
                 ID = 4,
-                ProjectID = 1,
-                StudentGrade = 6,
-                WeightedStudentGrade = 2,
-                PersonID = "1309862429",
+                ProjectID = 2,
+                StudentGrade = 5,
+                WeightedStudentGrade = (float)0.1,
+                PersonID = "1303922299",
 
             });
+
             gradesList.Add(new Grade
             {
                 ID = 5,
-                ProjectID = 2,
-                StudentGrade = 5,
-                WeightedStudentGrade = 3,
-                PersonID = "1309862429",
+                ProjectID = 5,
+                StudentGrade = 3,
+                WeightedStudentGrade = (float)0.93,
+                PersonID = "1303922299",
 
             });
-
-            gradesList.Add(new Grade
-            {
-                ID = 6,
-                ProjectID = 1,
-                StudentGrade = 8,
-                WeightedStudentGrade = 2,
-                PersonID = "2411903079",
-
-            });
+        
 
             #endregion
 
@@ -163,7 +206,7 @@ namespace CoursesAPI.Tests.MockObjects
             {
                 ID = 4,
                 Name = "Skilaverkefni1",
-                ProjectGroupID = 1,
+                ProjectGroupID = 2,
                 CourseInstanceID = 1,
                 OnlyHigherThanProjectID = null,
                 Weight = 5,
@@ -174,13 +217,27 @@ namespace CoursesAPI.Tests.MockObjects
             {
                 ID = 5,
                 Name = "Skilaverkefni2",
-                ProjectGroupID = 1,
+                ProjectGroupID = 2,
                 CourseInstanceID = 1,
-                OnlyHigherThanProjectID = 4,
-                Weight = 5,
+                OnlyHigherThanProjectID = null,
+                Weight = 31,
                 MinGradeToPassCourse = null,
 
             });
+
+            projectList.Add(new Project
+            {
+                ID = 6,
+                Name = "Lokapróf",
+                ProjectGroupID = null,
+                CourseInstanceID = 1,
+                OnlyHigherThanProjectID = null,
+                Weight = 60,
+                MinGradeToPassCourse = 5,
+
+            });
+
+            
             #endregion
 
             #region Mock data - ProjectGroup
