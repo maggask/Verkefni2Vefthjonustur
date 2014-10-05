@@ -12,25 +12,26 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The project name, e.g lokapróf, skilaverkefni...
         /// </summary>
-        [Required]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "Name required")]
         public String   Name                     { get; set; }
 
         /// <summary>
         /// Weight of the project, 5 for 5%, 10 for 10% ect.
         /// </summary>
-        [Required]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "Project weight required")]
         [Range(0, 100)]
         public int      Weight                   { get; set; }
 
         /// <summary>
         /// The minimal grade to pass the course.
         /// </summary>
+        [Range(0, 10)]
         public float?   MinGradeToPassCourse     { get; set; }
 
         /// <summary>
         /// The instance ID of the given course.
         /// </summary>
-        [Required]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "Course Instance required")]
         public int      CourseInstanceID         { get; set; }
 
         /// <summary>

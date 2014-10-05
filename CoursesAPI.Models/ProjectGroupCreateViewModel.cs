@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,14 @@ namespace CoursesAPI.Models
         /// The name of the project, e.g Verkefni, Lokapróf
         /// Netpróf, Endurtektarpróf og Miðannarpróf.
         /// </summary>
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "Name required")]
         public String Name { get; set; }
 
         /// <summary>
         /// How many e.g projects count to final
         /// grade in a course.
         /// </summary>
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "How many projects count towards grade required")]
         public int GradedProjectsCount { get; set; }
     }
 }

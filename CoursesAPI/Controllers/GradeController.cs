@@ -15,7 +15,7 @@ namespace CoursesAPI.Controllers
     /// <summary>
     /// GradeController represents resources belonging to grades.
     /// </summary>
-    [Authorize]
+    //[Authorize]
     [RoutePrefix("api/courses/{courseInstanceID}")]
     public class GradeController : ApiController
     {
@@ -65,7 +65,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Returns the group that was created.</returns>
-        [Authorize(Roles="teacher")]
+        //[Authorize(Roles="teacher")]
         [HttpPost]
         [Route("PostProjectGroup")]
         public ProjectGroup PostProjectGroup(ProjectGroupCreateViewModel model)
