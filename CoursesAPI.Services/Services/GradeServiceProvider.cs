@@ -259,7 +259,7 @@ namespace CoursesAPI.Services.Services
             var allGrades = AllGradesInOrder(projectID);
             var grade = GetGrade(projectID, studentID);
 
-            int standing = allGrades.BinarySearch(grade) + 1;
+            int standing = ((allGrades.IndexOf(grade)) + 1);
 
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
@@ -300,7 +300,7 @@ namespace CoursesAPI.Services.Services
             var allGrades = AllFinalGradesInOrder(courseInstanceID);
             var grade = GetCurrentFinalGrade(courseInstanceID, studentID);
 
-            int standing = (allGrades.Count() - allGrades.BinarySearch(grade));
+            int standing = ((allGrades.IndexOf(grade)) + 1);
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
             return rankings;
