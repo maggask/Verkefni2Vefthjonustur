@@ -138,14 +138,26 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetFinalGrade()
         {
             // Arrange:
-            const String gradePassed = "8 - Passed";
-            const String studentID = "1309862429"; 
+            const float gradePassed1 = (float)4.0;
+            const float gradePassed2 = (float)7.5;
+            const float gradePassed3 = (float)0.0;
+            const float gradePassed4 = (float)10.0;
+            const String studentID1 = "1309862429";
+            const String studentID2 = "2411903079";
+            const String studentID3 = "1303922299";
+            const String studentID4 = "0109753019";
              
             //Act:
-            var finalGrade = _service.GetFinalGrade(1, studentID);
+            var finalGrade1 = _service.GetFinalGrade(1, studentID1);
+            var finalGrade2 = _service.GetFinalGrade(1, studentID2);
+            var finalGrade3 = _service.GetFinalGrade(1, studentID3);
+            var finalGrade4 = _service.GetFinalGrade(1, studentID4);
 
             // Assert
-            Assert.AreEqual(finalGrade, gradePassed); 
+            Assert.AreEqual(finalGrade1, gradePassed1);
+            Assert.AreEqual(finalGrade2, gradePassed2);
+            Assert.AreEqual(finalGrade3, gradePassed3);
+            Assert.AreEqual(finalGrade4, gradePassed4); 
         }
 
         /// <summary>
@@ -179,7 +191,7 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetFinalRankings()
         {
             // Arrange:
-            const String studentID1 = "1309862429";
+            const String studentID1 = "0109753019";
             const String studentID2 = "1303922299";
             const String studentID3 = "2411903079";
 
@@ -190,9 +202,9 @@ namespace CoursesAPI.Tests.Services
             var finalRankingsEqual = _service.GetFinalRankings(1, studentID3);
 
             // Assert
-            Assert.IsTrue(finalRankingsFirst == "1/4");
-            Assert.IsTrue(finalRankingsEqual == "2-3/4");
-            Assert.IsTrue(finalRankingsLast == "4/4");
+            Assert.IsTrue(finalRankingsFirst == "1/5");
+            Assert.IsTrue(finalRankingsEqual == "2-3/5");
+            Assert.IsTrue(finalRankingsLast == "5/5");
         }
 
 	}     

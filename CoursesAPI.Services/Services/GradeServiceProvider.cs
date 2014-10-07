@@ -326,19 +326,17 @@ namespace CoursesAPI.Services.Services
         /// <param name="courseInstanceID"></param>
         /// <param name="studentID"></param>
         /// <returns>Returns the final grade of student as a string.</returns>
-        public String GetFinalGrade(int courseInstanceID, String studentID)
+        public float GetFinalGrade(int courseInstanceID, String studentID)
         {
-            String passed = "";
-
             var checkIfFailed = (from p in _projects.All()
                                          where p.CourseInstanceID == courseInstanceID
                                                && p.MinGradeToPassCourse != null
                                          select p).ToList();
             foreach(var c in checkIfFailed)
             {
-                if(c.MinGradeToPassCourse > GetGrade(c.ID, studentID))
+                if(c.MinGradeToPassCourse > GetGrade(c.ID, studentID) || c == null)
                 {
-                    return "Failed to pass exam";
+                    return 0;
                 }
             }
 
@@ -373,7 +371,7 @@ namespace CoursesAPI.Services.Services
             finalGrade = finalGrade * factor;
             finalGrade = finalGrade * 2;
             var fin = (Math.Round(System.Convert.ToDouble(finalGrade), MidpointRounding.AwayFromZero)) / 2;
-
+            /*
             if (fin >= 5)
             {
                 passed = "Passed";
@@ -382,12 +380,12 @@ namespace CoursesAPI.Services.Services
             {
                 passed = "Failed";
             }
-
+            */
             if (fin > 10)
             {
                 fin = 10;
             }
-            return ( fin.ToString()+ " - " + passed);
+            return (float)fin;
         }
 
         /// <summary>
@@ -432,7 +430,7 @@ namespace CoursesAPI.Services.Services
                               select p).ToList();
             foreach(var p in allPersons)
             {
-                String temp = GetFinalGrade(courseInstanceID, p.SSN);
+                float temp = GetFinalGrade(courseInstanceID, p.SSN);
                 allGrades.Add(p.Name + " - " + temp);
             }
 
