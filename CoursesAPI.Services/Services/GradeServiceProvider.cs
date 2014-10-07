@@ -40,7 +40,7 @@ namespace CoursesAPI.Services.Services
         /// course instance.
         /// </summary>
         /// <param name="model"></param>
-        public Project AddProject(ProjectCreateViewModel model)
+        public Project AddProject(ProjectCreateViewModel model, int courseInstanceID)
         {
             CourseAPIValidation.Validate(model);
 
@@ -49,7 +49,7 @@ namespace CoursesAPI.Services.Services
                 Name = model.Name,
                 Weight = model.Weight,
                 MinGradeToPassCourse = model.MinGradeToPassCourse,
-                CourseInstanceID = model.CourseInstanceID,
+                CourseInstanceID = courseInstanceID,
                 ProjectGroupID = model.ProjectGroupID,
                 OnlyHigherThanProjectID = model.OnlyHigherThanProjectID
             };

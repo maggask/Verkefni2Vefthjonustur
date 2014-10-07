@@ -18,14 +18,14 @@ namespace CoursesAPI.Models
         /// The name of the project, e.g Verkefni, Lokapróf
         /// Netpróf, Endurtektarpróf og Miðannarpróf.
         /// </summary>
-        [Required(ErrorMessageResourceName="Name required")]
+        [Required(ErrorMessage="Name required")]
         public String       Name                    { get; set; }
 
         /// <summary>
         /// How many e.g projects count to final
         /// grade in a course.
         /// </summary>
-        [Required(ErrorMessageResourceName="How many projects count towards grade required")]
+        [Required(ErrorMessage="How many projects count towards grade required")]
         public int          GradedProjectsCount     { get; set; }
     }
 }

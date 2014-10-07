@@ -9,6 +9,7 @@ using CoursesAPI.Services.DataAccess;
 using CoursesAPI.Services.Services;
 using CoursesAPI.Services.Models.Entities;
 using CoursesAPI.Models;
+using CoursesAPI.Filters;
 
 namespace CoursesAPI.Controllers
 {
@@ -17,6 +18,7 @@ namespace CoursesAPI.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/courses/{courseInstanceID}")]
+    [AppExceptionFilter]
     public class GradeController : ApiController
     {
         private readonly GradeServiceProvider _service;
@@ -38,9 +40,9 @@ namespace CoursesAPI.Controllers
         [Authorize(Roles="teacher")]
         [HttpPost]
         [Route("PostProject")]
-        public Project PostProject(ProjectCreateViewModel model)
+        public Project PostProject(ProjectCreateViewModel model, int courseInstanceID)
         {
-            return _service.AddProject(model);
+            return _service.AddProject(model, courseInstanceID);
         }
 
         /// <summary>

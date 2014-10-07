@@ -30,7 +30,7 @@ namespace CoursesAPI.Services.Helpers
             if (model == null)
             {
                 // Add custom error code which is used to retrieve the error message in the correct lang in the filter at the API level
-                results.Add(new ValidationResult(ErrorCodes.IdDoesNotExistException));
+                results.Add(new ValidationResult(ErrorCodes.ModelCannotBeNull));
                 throw new CoursesAPIValidationException(results);
             }
 

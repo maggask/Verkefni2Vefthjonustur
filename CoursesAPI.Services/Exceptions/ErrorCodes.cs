@@ -10,5 +10,6 @@ namespace CoursesAPI.Services.Exceptions
     {
         public const string IdDoesNotExistException = "IdDoesNotExistException";
         public const string LanguageDoesNotExist = "LanguageDoesNotExist";
+        public const string ModelCannotBeNull = "ModelCannotBeNull";
     }
 }

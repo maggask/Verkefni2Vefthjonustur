@@ -12,13 +12,13 @@ namespace CoursesAPI.Models
         /// <summary>
         /// Instance ID of the project involved.
         /// </summary>
-        [Required(ErrorMessageResourceName="ProjectID required")]
+        [Required(ErrorMessage="ProjectID required")]
         public int          ProjectID               { get; set; }
 
         /// <summary>
         /// The students grade in a project involved.
         /// </summary>
-        [Required(ErrorMessageResourceName="Student Grade required")]
+        [Required(ErrorMessage="Student Grade required")]
         public float        StudentGrade            { get; set; }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace CoursesAPI.Models
         /// <summary>
         /// Instance ID of the person involved.
         /// </summary>
-        [Required(ErrorMessageResourceName="Person SSN required")]
+        [Required(ErrorMessage="Person SSN required")]
         public string       PersonID                { get; set; }
     }
 }

@@ -33,9 +33,9 @@ namespace CoursesAPI.Filters
 
                 var validationResults = ex.GetValidationResults();
 
-                if (validationResults.Count > 0 && validationResults.Where(x => x.ErrorMessage == ErrorCodes.IdDoesNotExistException).FirstOrDefault() != null)
+                if (validationResults.Count > 0 && validationResults.Where(x => x.ErrorMessage == ErrorCodes.ModelCannotBeNull).FirstOrDefault() != null)
                 {
-                    //error.Add("CoursesAPIValidationException", Resources.Resources.IdDoesNotExistException);
+                    error.Add("CoursesAPIValidationException", ErrorCodes.ModelCannotBeNull);
                 }
                 else
                 { 

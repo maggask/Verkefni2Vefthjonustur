@@ -12,13 +12,13 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The project name, e.g lokapróf, skilaverkefni...
         /// </summary>
-        [Required(ErrorMessageResourceName="Name required")]
+        [Required(ErrorMessage="Name required")]
         public String   Name                     { get; set; }
 
         /// <summary>
         /// Weight of the project, 5 for 5%, 10 for 10% ect.
         /// </summary>
-        [Required(ErrorMessageResourceName="Project weight required")]
+        [Required(ErrorMessage="Project weight required")]
         [Range(0, 100)]
         public int      Weight                   { get; set; }
 
@@ -31,8 +31,7 @@ namespace CoursesAPI.Models
         /// <summary>
         /// The instance ID of the given course.
         /// </summary>
-        [Required(ErrorMessageResourceName="Course Instance required")]
-        public int      CourseInstanceID         { get; set; }
+        //public int      CourseInstanceID         { get; set; }
 
         /// <summary>
         /// If a project is set to push up a given grade
