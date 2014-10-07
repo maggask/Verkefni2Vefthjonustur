@@ -100,19 +100,17 @@ namespace CoursesAPI.Tests.Services
         /// <summary>
         /// Test to get project group grade.
         /// </summary>
-        [TestMethod] // Þetta test þarf að laga
+        [TestMethod]
         public void GradeTestGetProjectGroupGrade()
         {
             // Arrange:
-            const Double grade = 0;
             const String studentID = "1309862429";
 
             // Act:
-            var groupGrade = _service.GetProjectGroupGrade(1, studentID);
-            var fin = (Math.Round(System.Convert.ToDouble(groupGrade), MidpointRounding.AwayFromZero)) / 2;
+            float groupGrade = _service.GetProjectGroupGrade(1, studentID);
  
             // Assert
-            Assert.AreEqual(fin,  grade);
+            Assert.AreEqual(groupGrade,  (float)0.16);
         }
 
         /// <summary>
@@ -157,22 +155,16 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetProjectRankings()
         {
             // Arrange:
-
-            const String studentID1 = "1303922299";
+            const String studentID1 = "1309862429";
             const String studentID2 = "1303922299";
-            char[] split = { '/' };
 
             //Act:
             var projectRankingsFirst = _service.GetProjectRankings(studentID1, 1);
             var projectRankingsSecond = _service.GetProjectRankings(studentID2, 1);
-
-            string[] getfirst = projectRankingsFirst.Split(split);
-            string[] getsecond = projectRankingsSecond.Split(split);
-            int first = Int32.Parse(getfirst[0]);
-            int second = Int32.Parse(getsecond[0]);
             
             // Assert            
-            Assert.IsTrue(first < second);
+            Assert.IsTrue(projectRankingsFirst == "1/2");
+            Assert.IsTrue(projectRankingsSecond == "2/2");
         }
 
         /// <summary>
@@ -183,22 +175,17 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetFinalRankings()
         {
             // Arrange:
-            const String studentID1 = "1303922299";
+            const String studentID1 = "1309862429";
             const String studentID2 = "1303922299";
-            char[] split = { '/' };
 
             //Act:
 
             var finalRankingsFirst = _service.GetFinalRankings(1, studentID1);
             var finalRankingsSecond = _service.GetFinalRankings(1, studentID2);
 
-            string[] getfirst = finalRankingsFirst.Split(split);
-            string[] getsecond = finalRankingsSecond.Split(split);
-            int first = Int32.Parse(getfirst[0]);
-            int second = Int32.Parse(getsecond[0]);
-           
             // Assert
-            Assert.IsTrue(first < second);
+            Assert.IsTrue(finalRankingsFirst == "1/3");
+            Assert.IsTrue(finalRankingsSecond == "2/3");
         }
 
 	}     
