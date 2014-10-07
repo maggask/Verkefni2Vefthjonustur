@@ -371,21 +371,30 @@ namespace CoursesAPI.Services.Services
             finalGrade = finalGrade * factor;
             finalGrade = finalGrade * 2;
             var fin = (Math.Round(System.Convert.ToDouble(finalGrade), MidpointRounding.AwayFromZero)) / 2;
-            /*
-            if (fin >= 5)
-            {
-                passed = "Passed";
-            }
-            else
-            {
-                passed = "Failed";
-            }
-            */
+
             if (fin > 10)
             {
                 fin = 10;
             }
             return (float)fin;
+        }
+
+        /// <summary>
+        /// Gets if a student passed or failed a course
+        /// </summary>
+        /// <param name="courseInstanceID"></param>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
+        public String GetStudentCourseStatus(int courseInstanceID, String studentID)
+        {
+            var fin = GetFinalGrade(courseInstanceID, studentID);
+
+            if (fin >= 5)
+            {
+                return "Passed";
+            }
+
+            return "Failed";
         }
 
         /// <summary>
