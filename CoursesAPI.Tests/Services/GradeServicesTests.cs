@@ -249,7 +249,7 @@ namespace CoursesAPI.Tests.Services
             // Assert
             Assert.AreEqual(AllProject1.Count, 4, "The project count is not correct");
             Assert.AreEqual(AllProject2.Count, 2, "The project count is not correct");
-            Assert.AreEqual(AllProject3.Count, 4, "The project count is not correct");
+            Assert.AreNotEqual(AllProject3.Count, 45, "The project count is not correct");
         }
 
         /// Test to get a list with all student 
@@ -266,6 +266,7 @@ namespace CoursesAPI.Tests.Services
            
             // Assert
             Assert.AreEqual(AllGrades1.Count, 5, "The project count is not correct");
+            Assert.AreNotEqual(AllGrades1.Count, 0, "The project count is not correct");
         }
 
         [TestMethod]
