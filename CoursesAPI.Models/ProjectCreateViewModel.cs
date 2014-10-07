@@ -29,11 +29,6 @@ namespace CoursesAPI.Models
         public float?   MinGradeToPassCourse     { get; set; }
 
         /// <summary>
-        /// The instance ID of the given course.
-        /// </summary>
-        //public int      CourseInstanceID         { get; set; }
-
-        /// <summary>
         /// If a project is set to push up a given grade
         /// if you score higher on that project than
         /// something else, this ID is used. Can be empty.
