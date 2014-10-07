@@ -38,17 +38,18 @@ namespace CoursesAPI.Tests.Services
 		public void GradeTestAddNewProject()
 		{
 			// Arrange:
+            var courseInstanceID = 1;
+
             var project = new ProjectCreateViewModel
             {
                 Name = "Lokapróf",
                 Weight = 80,
                 MinGradeToPassCourse = 5,
-                CourseInstanceID = 1,
                 OnlyHigherThanProjectID = null
             };
 
 			// Act:
-            var proj = _service.AddProject(project);
+            var proj = _service.AddProject(project, courseInstanceID);
 
 			// Assert:
             Assert.IsNotNull(project, "The object should contain the created project!");
