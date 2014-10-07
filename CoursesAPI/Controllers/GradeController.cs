@@ -100,7 +100,7 @@ namespace CoursesAPI.Controllers
         [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetFinalGrade/{studentID}")]
-        public String GetFinalGrade(int courseInstanceID, String studentID)
+        public float GetFinalGrade(int courseInstanceID, String studentID)
         {
             return _service.GetFinalGrade(courseInstanceID, studentID);
         }
