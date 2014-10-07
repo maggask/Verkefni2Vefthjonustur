@@ -12,24 +12,24 @@ namespace CoursesAPI.Models
         /// <summary>
         /// Instance ID of the project involved.
         /// </summary>
-        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "ProjectID required")]
-        public int ProjectID { get; set; }
+        [Required(ErrorMessageResourceName="ProjectID required")]
+        public int          ProjectID               { get; set; }
 
         /// <summary>
         /// The students grade in a project involved.
         /// </summary>
-        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "Student Grade required")]
-        public float StudentGrade { get; set; }
+        [Required(ErrorMessageResourceName="Student Grade required")]
+        public float        StudentGrade            { get; set; }
 
         /// <summary>
         /// The students weighted grade(grade * weight/100) in a project involved.
         /// </summary>
-        public float WeightedStudentGrade { get; set; }
+        public float        WeightedStudentGrade    { get; set; }
 
         /// <summary>
         /// Instance ID of the person involved.
         /// </summary>
-        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "Person SSN required")]
-        public string PersonID { get; set; }
+        [Required(ErrorMessageResourceName="Person SSN required")]
+        public string       PersonID                { get; set; }
     }
 }

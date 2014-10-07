@@ -35,9 +35,13 @@ namespace CoursesAPI.Services.Services
             _teacherRegistrations = _uow.GetRepository<TeacherRegistration>();
 		}
 
+        /// <summary>
+        /// Gets a list of all teachers in given course.
+        /// </summary>
+        /// <param name="semester"></param>
+        /// <returns>Returns a list of teachers.</returns>
 		public List<Person> GetCourseTeachers(string semester)
 		{
-			// TODO: Lists all teachers that teach a course in a given semester
             var teachers = (from p in _persons.All()
                             join t in _teacherRegistrations.All() on p.SSN equals t.SSN
                             join c in _courseInstances.All() on t.CourseInstanceID equals c.ID
@@ -47,10 +51,13 @@ namespace CoursesAPI.Services.Services
 			return teachers;
 		}
 
+        /// <summary>
+        /// Gets all courses taught in a given semester.
+        /// </summary>
+        /// <param name="semester"></param>
+        /// <returns>Returns a list of courses.</returns>
 		public List<CourseInstanceDTO> GetSemesterCourses(string semester)
 		{
-            // TODO: Joins CourseTemplates and CourseInstnaces table and returns
-            // courses taught on specific semester to list
             var courses = from c in _courseInstances.All()
                           where c.SemesterID == semester
                           select new CourseInstanceDTO()
@@ -64,6 +71,12 @@ namespace CoursesAPI.Services.Services
             return courses.ToList();
 		}
 
+        /// <summary>
+        /// Gets main teacher in a given course and semester,
+        /// default empty if there is none.
+        /// </summary>
+        /// <param name="semester"></param>
+        /// <returns>Returns a list of main teachers.</returns>
         public List<CourseInstanceDTO> GetTeacherInCourse(string semester)
         {
             var courseWithTeacher = from c in _courseInstances.All()

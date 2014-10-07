@@ -40,7 +40,6 @@ namespace CoursesAPI.Services.Services
         /// course instance.
         /// </summary>
         /// <param name="model"></param>
-        /// <returns></returns>
         public Project AddProject(ProjectCreateViewModel model)
         {
             CourseAPIValidation.Validate(model);
@@ -66,7 +65,6 @@ namespace CoursesAPI.Services.Services
         /// a given project.
         /// </summary>
         /// <param name="model"></param>
-        /// <returns></returns>
         public Grade AddGrade(GradeCreateViewModel model)
         {
             CourseAPIValidation.Validate(model);
@@ -94,7 +92,6 @@ namespace CoursesAPI.Services.Services
         /// for a given course instance.
         /// </summary>
         /// <param name="model"></param>
-        /// <returns></returns>
         public ProjectGroup AddProjectGroup(ProjectGroupCreateViewModel model)
         {
             CourseAPIValidation.Validate(model);
@@ -117,7 +114,7 @@ namespace CoursesAPI.Services.Services
         /// group.
         /// </summary>
         /// <param name="ID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the total grade as float.</returns>
         public float GetProjectGroupGrade(int ID, String studentID)
         {
             var theGroup = (from h in _projectGroups.All()
@@ -145,7 +142,7 @@ namespace CoursesAPI.Services.Services
         /// for a given student.
         /// </summary>
         /// <param name="studentID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the final grade for a given student.</returns>
         public float GetCurrentFinalGrade(int courseInstanceID, String studentID)
         {
             float finalGrade = 0;
@@ -220,7 +217,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="projectID"></param>
         /// <param name="studentID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the grade of a project has float.</returns>
         public float GetGrade(int projectID, String studentID)
         {
             var grade = (from g in _grades.All()
@@ -232,10 +229,11 @@ namespace CoursesAPI.Services.Services
         }
 
         /// <summary>
-        /// 
+        /// Helper function that goes through all
+        /// the grades and orders them descending.
         /// </summary>
         /// <param name="projectID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the ordered list of grades.</returns>
         public List<float> AllGradesInOrder(int projectID)
         {
             var allGrades = (from g in _grades.All()
@@ -253,13 +251,13 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="studentID"></param>
         /// <param name="projectID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the students ranking as a string.</returns>
         public String GetProjectRankings(String studentID, int projectID)
         {
             var allGrades = AllGradesInOrder(projectID);
             var grade = GetGrade(projectID, studentID);
 
-            int standing = allGrades.BinarySearch(grade) + 1;
+            int standing = ((allGrades.IndexOf(grade)) + 1);
 
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
@@ -270,7 +268,7 @@ namespace CoursesAPI.Services.Services
         /// Arranges all final grades
         /// in descending order.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns a list of ordered final grades.</returns>
         public List<float> AllFinalGradesInOrder(int courseInstanceID)
         {
             List<float> allFinalGradesInOrder = new List<float>();
@@ -294,13 +292,13 @@ namespace CoursesAPI.Services.Services
         /// same grade as others you wont get a precise ranking
         /// </summary>
         /// <param name="studentID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the final rankings of a student as a string.</returns>
         public String GetFinalRankings(int courseInstanceID, String studentID)
         {
             var allGrades = AllFinalGradesInOrder(courseInstanceID);
             var grade = GetCurrentFinalGrade(courseInstanceID, studentID);
 
-            int standing = (allGrades.Count() - allGrades.BinarySearch(grade));
+            int standing = ((allGrades.IndexOf(grade)) + 1);
             String rankings = (standing.ToString() + "/" + allGrades.Count());
 
             return rankings;
@@ -311,7 +309,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="courseInstanceID"></param>
         /// <param name="studentID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the final grade of student as a string.</returns>
         public String GetFinalGrade(int courseInstanceID, String studentID)
         {
             String passed = "";
@@ -380,7 +378,7 @@ namespace CoursesAPI.Services.Services
         /// Returns all grades for a single student
         /// </summary>
         /// <param name="studentID"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of all grades for a given student.</returns>
         public List<float> GetAllGradesByStudent(String studentID)
         {
             var allGrades = (from g in _grades.All()
@@ -395,7 +393,7 @@ namespace CoursesAPI.Services.Services
         /// </summary>
         /// <param name="courseInstanceID"></param>
         /// <param name="projectID"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of projects.</returns>
         public List<String> GetProjectOverView(int projectID)
         {
             var allGrades = (from g in _grades.All()
@@ -410,7 +408,7 @@ namespace CoursesAPI.Services.Services
         /// Returns a list with all student names and there grade in a current course
         /// </summary>
         /// <param name="courseInstanceID"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of all final grades.</returns>
         public List<String> GetFinalGradeOverView(int courseInstanceID)
         {
             List<String> allGrades = new List<String>();

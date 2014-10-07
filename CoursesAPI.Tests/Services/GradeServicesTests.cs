@@ -100,7 +100,7 @@ namespace CoursesAPI.Tests.Services
         /// <summary>
         /// Test to get project group grade.
         /// </summary>
-        [TestMethod]
+        [TestMethod] // Þetta test þarf að laga
         public void GradeTestGetProjectGroupGrade()
         {
             // Arrange:
@@ -163,6 +163,14 @@ namespace CoursesAPI.Tests.Services
             //Act:
             var projectRankingsFirst = _service.GetProjectRankings(studentID1, 1);
 
+<<<<<<< HEAD
+=======
+            string[] getfirst = projectRankingsFirst.Split(split);
+            string[] getsecond = projectRankingsSecond.Split(split);
+            int first = Int32.Parse(getfirst[0]);
+            int second = Int32.Parse(getsecond[0]);
+            
+>>>>>>> origin/master
             // Assert            
             Assert.AreEqual(projectRankingsFirst, "1/2");
         }

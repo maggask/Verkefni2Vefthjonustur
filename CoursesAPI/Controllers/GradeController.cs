@@ -109,7 +109,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="studentID"></param>
         /// <param name="projectID"></param>
-        /// <returns></returns>
+        /// <returns>Returns the ranking of a given student in a course.</returns>
         [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetProjectRankings/{studentID}/{projectID}")]
@@ -124,7 +124,7 @@ namespace CoursesAPI.Controllers
         /// </summary>
         /// <param name="studentID"></param>
         /// <param name="courseInstanceID"></param>
-        /// <returns></returns>
+        /// <returns>Returns a students final rankings in a course.</returns>
         [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetFinalRankings/{studentID}")]
@@ -134,10 +134,10 @@ namespace CoursesAPI.Controllers
         }
 
         /// <summary>
-        /// Returns all grades for a single student
+        /// Returns all grades for a single student.
         /// </summary>
         /// <param name="studentID"></param>
-        /// <returns></returns>
+        /// <returns>Returns all grades of a given student.</returns>
         [Authorize(Roles="student,teacher")]
         [HttpGet]
         [Route("GetAllGradesByStudent/{studentID}")]
@@ -150,7 +150,7 @@ namespace CoursesAPI.Controllers
         /// Returns a list of all students and there grade for the given project
         /// </summary>
         /// <param name="projectID"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of students projects and there grades.</returns>
         [Authorize(Roles="teacher")]
         [HttpGet]
         [Route("ProjectOverView/{projectID}")]
@@ -163,7 +163,7 @@ namespace CoursesAPI.Controllers
         /// Returns a list with all student names and there grade in a current course
         /// </summary>
         /// <param name="courseInstanceID"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of students final grades.</returns>
         [HttpGet]
         [Authorize(Roles="teacher")]
         [Route("FinalGradeOverView")]

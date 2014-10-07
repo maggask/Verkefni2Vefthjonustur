@@ -28,7 +28,7 @@ namespace CoursesAPI.Controllers
         /// Returns a list of teachers in courses given a certain semester.
         /// </summary>
         /// <param name="semester"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of teachers.</returns>
 		[Authorize(Roles="student")]
         [Route("{semester}/teachers")]
 		public List<Person> GetCourseTeachers(string semester)
@@ -40,7 +40,7 @@ namespace CoursesAPI.Controllers
         /// Returns a list of courses taught on a certain semester
         /// </summary>
         /// <param name="semester"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of courses.</returns>
 		[Route("semester/{semester}")]
 		public List<CourseInstanceDTO> GetCoursesOnSemester(string semester)
 		{
@@ -51,7 +51,7 @@ namespace CoursesAPI.Controllers
         /// Returns a list of teachers that are teaching courses on a given semester.
         /// </summary>
         /// <param name="semester"></param>
-        /// <returns></returns>
+        /// <returns>Returns a list of main teachers.</returns>
         [Route("semester/{semester}/teacher")]
         public List<CourseInstanceDTO> GetTeacherInCourse(string semester)
         {
