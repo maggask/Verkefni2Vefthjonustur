@@ -202,10 +202,76 @@ namespace CoursesAPI.Tests.Services
             var finalRankingsEqual = _service.GetFinalRankings(1, studentID3);
 
             // Assert
-            Assert.IsTrue(finalRankingsFirst == "1/5");
-            Assert.IsTrue(finalRankingsEqual == "2-3/5");
-            Assert.IsTrue(finalRankingsLast == "5/5");
+
+            Assert.AreEqual(finalRankingsFirst, "1/5");
+            Assert.AreEqual(finalRankingsEqual, "2-3/5");
+            Assert.AreEqual(finalRankingsLast, "5/5");
+        }
+        /// <summary>
+        /// Test to get all the grades
+        /// from a specific student.
+        /// </summary>
+        [TestMethod]
+        public void GradeTestGetAllGradesByStudent()
+        {
+            // Arrange:
+            const String studentID1 = "0109753019";
+            const String studentID2 = "1303922299";
+            const String studentID3 = "2411903079";
+            
+            //Act:
+
+            var AllGrades1 = _service.GetAllGradesByStudent(studentID1);
+            var AllGrades2 = _service.GetAllGradesByStudent(studentID2);
+            var AllGrades3 = _service.GetAllGradesByStudent(studentID3);
+           
+            // Assert
+            Assert.AreEqual(AllGrades1.Count, 1, "The grade count is not correct");
+            Assert.AreEqual(AllGrades2.Count, 5, "The grade count is not correct");
+            Assert.AreEqual(AllGrades3.Count, 4, "The grade count is not correct");
+            
         }
 
+        /// <summary>
+        /// Test to get all the grades given 
+        /// to students for a specific project. 
+        /// </summary>
+        [TestMethod]
+        public void GradeTestGetProjectOverView()
+        {
+            // Arrange:
+            const int projectID1 = 1;
+            const int projectID2 = 2;
+            const int projectID3 = 5;
+
+            //Act:
+
+            var AllProject1 = _service.GetProjectOverView(projectID1);
+            var AllProject2 = _service.GetProjectOverView(projectID2);
+            var AllProject3 = _service.GetProjectOverView(projectID3);
+
+            // Assert
+            Assert.AreEqual(AllProject1.Count, 4, "The project count is not correct");
+            Assert.AreEqual(AllProject2.Count, 2, "The project count is not correct");
+            Assert.AreEqual(AllProject3.Count, 4, "The project count is not correct");
+
+        }
+
+        /// Test to get a list with all student 
+        /// names and there grade in a current course.
+        /// </summary>
+        [TestMethod]
+        public void GradeTestGetFinalGradeOverView()
+        {
+            // Arrange:
+            const int courseID1 = 1;
+           
+            //Act:
+
+            var AllGrades1 = _service.GetFinalGradeOverView(courseID1);
+           
+            // Assert
+            Assert.AreEqual(AllGrades1.Count, 5, "The project count is not correct");
+        }
 	}     
 }

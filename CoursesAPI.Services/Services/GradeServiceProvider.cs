@@ -403,7 +403,7 @@ namespace CoursesAPI.Services.Services
         }
 
         /// <summary>
-        /// Returns a list of all students and there grade for the given project
+        /// Returns a list of all students and their grade for the given project
         /// </summary>
         /// <param name="courseInstanceID"></param>
         /// <param name="projectID"></param>
