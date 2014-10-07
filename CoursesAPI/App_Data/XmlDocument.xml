@@ -496,21 +496,21 @@
             Returns a list of teachers in courses given a certain semester.
             </summary>
             <param name="semester"></param>
-            <returns></returns>
+            <returns>Returns a list of teachers.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.CoursesController.GetCoursesOnSemester(System.String)">
             <summary>
             Returns a list of courses taught on a certain semester
             </summary>
             <param name="semester"></param>
-            <returns></returns>
+            <returns>Returns a list of courses.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.CoursesController.GetTeacherInCourse(System.String)">
             <summary>
             Returns a list of teachers that are teaching courses on a given semester.
             </summary>
             <param name="semester"></param>
-            <returns></returns>
+            <returns>Returns a list of main teachers.</returns>
         </member>
         <member name="T:CoursesAPI.Controllers.GradeController">
             <summary>
@@ -573,7 +573,7 @@
             </summary>
             <param name="studentID"></param>
             <param name="projectID"></param>
-            <returns></returns>
+            <returns>Returns the ranking of a given student in a course.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.GradeController.GetFinalRankings(System.Int32,System.String)">
             <summary>
@@ -582,28 +582,28 @@
             </summary>
             <param name="studentID"></param>
             <param name="courseInstanceID"></param>
-            <returns></returns>
+            <returns>Returns a students final rankings in a course.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.GradeController.GetAllGradesByStudent(System.String)">
             <summary>
-            Returns all grades for a single student
+            Returns all grades for a single student.
             </summary>
             <param name="studentID"></param>
-            <returns></returns>
+            <returns>Returns all grades of a given student.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.GradeController.GetProjectOverView(System.Int32)">
             <summary>
             Returns a list of all students and there grade for the given project
             </summary>
             <param name="projectID"></param>
-            <returns></returns>
+            <returns>Returns a list of students projects and there grades.</returns>
         </member>
         <member name="M:CoursesAPI.Controllers.GradeController.GetFinalGradeOverView(System.Int32)">
             <summary>
             Returns a list with all student names and there grade in a current course
             </summary>
             <param name="courseInstanceID"></param>
-            <returns></returns>
+            <returns>Returns a list of students final grades.</returns>
         </member>
         <member name="T:CoursesAPI.Filters.AppExceptionFilter">
             <summary>

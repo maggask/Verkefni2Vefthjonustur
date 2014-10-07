@@ -28,6 +28,7 @@ namespace CoursesAPI.Tests.Services
             _mockUow.SetRepositoryData(_mockFactory.GetMock<Grade>());
             _mockUow.SetRepositoryData(_mockFactory.GetMock<Project>());
             _mockUow.SetRepositoryData(_mockFactory.GetMock<ProjectGroup>());
+            _mockUow.SetRepositoryData(_mockFactory.GetMock<Person>());
 		}
 
         /// <summary>
@@ -158,19 +159,16 @@ namespace CoursesAPI.Tests.Services
         {
             // Arrange:
 
-            const String studentID1 = "1303922299";
+         //   const String studentID1 = "1303922299";
+            const String studentID1 = "1309862429";
+
+
           
             //Act:
             var projectRankingsFirst = _service.GetProjectRankings(studentID1, 1);
 
-<<<<<<< HEAD
-=======
-            string[] getfirst = projectRankingsFirst.Split(split);
-            string[] getsecond = projectRankingsSecond.Split(split);
-            int first = Int32.Parse(getfirst[0]);
-            int second = Int32.Parse(getsecond[0]);
+
             
->>>>>>> origin/master
             // Assert            
             Assert.AreEqual(projectRankingsFirst, "1/2");
         }
@@ -183,14 +181,15 @@ namespace CoursesAPI.Tests.Services
         public void GradeTestGetFinalRankings()
         {
             // Arrange:
-            const String studentID1 = "1303922299";
+            const String studentID1 = "1309862429";
+           // const String studentID1 = "2411903079";
 
             //Act:
 
             var finalRankingsFirst = _service.GetFinalRankings(1, studentID1);
            
             // Assert
-            Assert.AreEqual(finalRankingsFirst, "1/2");
+            Assert.AreEqual(finalRankingsFirst, "1/3");
         }
 
 	}     
