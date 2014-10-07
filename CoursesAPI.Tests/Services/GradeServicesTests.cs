@@ -158,14 +158,17 @@ namespace CoursesAPI.Tests.Services
             // Arrange:
             const String studentID1 = "1309862429";
             const String studentID2 = "1303922299";
+            const String studentID3 = "2411903079";
           
             //Act:
             var projectRankingsFirst = _service.GetProjectRankings(studentID1, 1);
             var projectRankingsSecond = _service.GetProjectRankings(studentID2, 1);
+            var projectRankingsEqual = _service.GetProjectRankings(studentID3, 1);
             
             // Assert            
-            Assert.IsTrue(projectRankingsFirst == "1/2");
-            Assert.IsTrue(projectRankingsSecond == "2/2");
+            Assert.IsTrue(projectRankingsFirst == "1/4");
+            Assert.IsTrue(projectRankingsSecond == "2/4");
+            Assert.IsTrue(projectRankingsEqual == "3-4/4");
         }
 
         /// <summary>
@@ -178,15 +181,18 @@ namespace CoursesAPI.Tests.Services
             // Arrange:
             const String studentID1 = "1309862429";
             const String studentID2 = "1303922299";
+            const String studentID3 = "2411903079";
 
             //Act:
 
             var finalRankingsFirst = _service.GetFinalRankings(1, studentID1);
-            var finalRankingsSecond = _service.GetFinalRankings(1, studentID2);
+            var finalRankingsLast = _service.GetFinalRankings(1, studentID2);
+            var finalRankingsEqual = _service.GetFinalRankings(1, studentID3);
 
             // Assert
-            Assert.IsTrue(finalRankingsFirst == "1/3");
-            Assert.IsTrue(finalRankingsSecond == "2/3");
+            Assert.IsTrue(finalRankingsFirst == "1/4");
+            Assert.IsTrue(finalRankingsEqual == "2-3/4");
+            Assert.IsTrue(finalRankingsLast == "4/4");
         }
 
 	}     
