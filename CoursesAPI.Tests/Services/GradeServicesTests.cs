@@ -159,19 +159,12 @@ namespace CoursesAPI.Tests.Services
             // Arrange:
 
             const String studentID1 = "1303922299";
-            const String studentID2 = "1303922299";
-            char[] split = { '/' };
-
+          
             //Act:
             var projectRankingsFirst = _service.GetProjectRankings(studentID1, 1);
-            var projectRankingsSecond = _service.GetProjectRankings(studentID2, 1);
 
-            string[] getfirst = projectRankingsFirst.Split(split);
-            string[] getsecond = projectRankingsSecond.Split(split);
-            int first = Int32.Parse(getfirst[0]);
-            int second = Int32.Parse(getsecond[0]);
             // Assert            
-            Assert.IsTrue(first < second);
+            Assert.AreEqual(projectRankingsFirst, "1/2");
         }
 
         /// <summary>
@@ -183,21 +176,13 @@ namespace CoursesAPI.Tests.Services
         {
             // Arrange:
             const String studentID1 = "1303922299";
-            const String studentID2 = "1303922299";
-            char[] split = { '/' };
 
             //Act:
 
             var finalRankingsFirst = _service.GetFinalRankings(1, studentID1);
-            var finalRankingsSecond = _service.GetFinalRankings(1, studentID2);
-
-            string[] getfirst = finalRankingsFirst.Split(split);
-            string[] getsecond = finalRankingsSecond.Split(split);
-            int first = Int32.Parse(getfirst[0]);
-            int second = Int32.Parse(getsecond[0]);
            
             // Assert
-            Assert.IsTrue(first < second);
+            Assert.AreEqual(finalRankingsFirst, "1/2");
         }
 
 	}     
