@@ -262,11 +262,26 @@ namespace CoursesAPI.Tests.Services
             const int courseID1 = 1;
            
             //Act:
-
             var AllGrades1 = _service.GetFinalGradeOverView(courseID1);
            
             // Assert
             Assert.AreEqual(AllGrades1.Count, 5, "The project count is not correct");
+        }
+
+        [TestMethod]
+        public void GetStudentCourseStatus()
+        {
+            // Arrange:
+            const String studentID1 = "1303922299";
+            const String studentID2 = "2411903079";
+
+            //Act:
+            var failer = _service.GetStudentCourseStatus(1, studentID1);
+            var pass = _service.GetStudentCourseStatus(1, studentID2);
+
+            //Assert
+            Assert.AreEqual(failer, "Failed");
+            Assert.AreEqual(pass, "Passed");
         }
 	}     
 }

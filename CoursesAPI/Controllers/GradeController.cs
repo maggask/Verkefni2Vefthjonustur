@@ -173,5 +173,19 @@ namespace CoursesAPI.Controllers
         {
             return _service.GetFinalGradeOverView(courseInstanceID);
         }
+
+        /// <summary>
+        /// Gets if a student passed or failed a course
+        /// </summary>
+        /// <param name="courseInstanceID"></param>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize(Roles = "student,teacher")]
+        [Route("GetStudentCourseStatus/{studentID}")]
+        public String GetStudentCourseStatus(int courseInstanceID, String studentID)
+        {
+            return _service.GetStudentCourseStatus(courseInstanceID, studentID);
+        }
     }
 }

@@ -605,6 +605,14 @@
             <param name="courseInstanceID"></param>
             <returns>Returns a list of students final grades.</returns>
         </member>
+        <member name="M:CoursesAPI.Controllers.GradeController.GetStudentCourseStatus(System.Int32,System.String)">
+            <summary>
+            Gets if a student passed or failed a course
+            </summary>
+            <param name="courseInstanceID"></param>
+            <param name="studentID"></param>
+            <returns></returns>
+        </member>
         <member name="T:CoursesAPI.Filters.AppExceptionFilter">
             <summary>
             An attempt to write a generic exception filter, which would ensure..
