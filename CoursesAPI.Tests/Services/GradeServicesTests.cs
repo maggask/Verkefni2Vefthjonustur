@@ -197,13 +197,11 @@ namespace CoursesAPI.Tests.Services
             const String studentID3 = "2411903079";
 
             //Act:
-
             var finalRankingsFirst = _service.GetFinalRankings(1, studentID1);
             var finalRankingsLast = _service.GetFinalRankings(1, studentID2);
             var finalRankingsEqual = _service.GetFinalRankings(1, studentID3);
 
             // Assert
-
             Assert.AreEqual(finalRankingsFirst, "1/5");
             Assert.AreEqual(finalRankingsEqual, "2-3/5");
             Assert.AreEqual(finalRankingsLast, "5/5");
@@ -221,7 +219,6 @@ namespace CoursesAPI.Tests.Services
             const String studentID3 = "2411903079";
             
             //Act:
-
             var AllGrades1 = _service.GetAllGradesByStudent(studentID1);
             var AllGrades2 = _service.GetAllGradesByStudent(studentID2);
             var AllGrades3 = _service.GetAllGradesByStudent(studentID3);
@@ -229,8 +226,7 @@ namespace CoursesAPI.Tests.Services
             // Assert
             Assert.AreEqual(AllGrades1.Count, 1, "The grade count is not correct");
             Assert.AreEqual(AllGrades2.Count, 5, "The grade count is not correct");
-            Assert.AreEqual(AllGrades3.Count, 4, "The grade count is not correct");
-            
+            Assert.AreEqual(AllGrades3.Count, 4, "The grade count is not correct");           
         }
 
         /// <summary>
@@ -246,7 +242,6 @@ namespace CoursesAPI.Tests.Services
             const int projectID3 = 5;
 
             //Act:
-
             var AllProject1 = _service.GetProjectOverView(projectID1);
             var AllProject2 = _service.GetProjectOverView(projectID2);
             var AllProject3 = _service.GetProjectOverView(projectID3);
@@ -255,7 +250,6 @@ namespace CoursesAPI.Tests.Services
             Assert.AreEqual(AllProject1.Count, 4, "The project count is not correct");
             Assert.AreEqual(AllProject2.Count, 2, "The project count is not correct");
             Assert.AreEqual(AllProject3.Count, 4, "The project count is not correct");
-
         }
 
         /// Test to get a list with all student 
