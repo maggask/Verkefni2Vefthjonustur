@@ -54,6 +54,14 @@ namespace CoursesAPI.Tests.MockObjects
                 Name = "Anna Laufey Stefánsdóttir",
                 Email = "annals12@ru.is"
             });
+            
+            personList.Add(new Person
+            {
+                ID = 4,
+                SSN = "0101862349",
+                Name = "Þórður Þorsteinsson",
+                Email = "thordurt12@ru.is"
+            });    
             #endregion
 
             #region Mock data - Grades
@@ -106,7 +114,7 @@ namespace CoursesAPI.Tests.MockObjects
             // Anna Laufey
             gradesList.Add(new Grade
             {
-                ID = 1,
+                ID = 6,
                 ProjectID = 1,
                 StudentGrade = 6,
                 WeightedStudentGrade = (float)0.12,
@@ -115,7 +123,7 @@ namespace CoursesAPI.Tests.MockObjects
 
             gradesList.Add(new Grade
             {
-                ID = 2,
+                ID = 7,
                 ProjectID = 4,
                 StudentGrade = 5,
                 WeightedStudentGrade = (float)0.25,
@@ -124,7 +132,7 @@ namespace CoursesAPI.Tests.MockObjects
 
             gradesList.Add(new Grade
             {
-                ID = 3,
+                ID = 8,
                 ProjectID = 6,
                 StudentGrade = 5,
                 WeightedStudentGrade = (float)3,
@@ -133,7 +141,7 @@ namespace CoursesAPI.Tests.MockObjects
 
             gradesList.Add(new Grade
             {
-                ID = 4,
+                ID = 9,
                 ProjectID = 2,
                 StudentGrade = 5,
                 WeightedStudentGrade = (float)0.1,
@@ -142,11 +150,47 @@ namespace CoursesAPI.Tests.MockObjects
 
             gradesList.Add(new Grade
             {
-                ID = 5,
+                ID = 10,
                 ProjectID = 5,
                 StudentGrade = 3,
                 WeightedStudentGrade = (float)0.93,
                 PersonID = "1303922299",
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 11,
+                ProjectID = 6,
+                StudentGrade = 10,
+                WeightedStudentGrade = (float)6,
+                PersonID = "2411903079",
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 12,
+                ProjectID = 6,
+                StudentGrade = 10,
+                WeightedStudentGrade = (float)6,
+                PersonID = "0101862349",
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 1,
+                ProjectID = 1,
+                StudentGrade = 0,
+                WeightedStudentGrade = (float)0.0,
+                PersonID = "2411903079",
+            });
+
+            gradesList.Add(new Grade
+            {
+                ID = 1,
+                ProjectID = 1,
+                StudentGrade = 0,
+                WeightedStudentGrade = (float)0.0,
+                PersonID = "0101862349",
             });
             #endregion
 

@@ -134,7 +134,7 @@ namespace CoursesAPI.Services.Services
                           where p.ProjectGroupID == ID
                           select p.Weight).FirstOrDefault();
 
-            return (allProjects.Average(x => x.WeightedStudentGrade));
+            return allProjects.Average(x => x.WeightedStudentGrade);
         }
 
         /// <summary>
@@ -255,13 +255,20 @@ namespace CoursesAPI.Services.Services
         public String GetProjectRankings(String studentID, int projectID)
         {
             var allGrades = AllGradesInOrder(projectID);
+            var reverse = new List<float>(allGrades);
+            reverse.Sort();
+            
             var grade = GetGrade(projectID, studentID);
 
-            int standing = ((allGrades.IndexOf(grade)) + 1);
+            int frontStanding = ((allGrades.IndexOf(grade)) + 1);
+            int backStanding  = (allGrades.Count() - (reverse.IndexOf(grade)));
+            
+            if (frontStanding == backStanding)
+            {
+                return (frontStanding.ToString() + "/" + allGrades.Count());
+            }
 
-            String rankings = (standing.ToString() + "/" + allGrades.Count());
-
-            return rankings;
+            return (frontStanding.ToString() + "-" + backStanding.ToString() + "/" + allGrades.Count());
         }
         
         /// <summary>
@@ -282,6 +289,7 @@ namespace CoursesAPI.Services.Services
             }
 
             allFinalGradesInOrder.Sort();
+            allFinalGradesInOrder.Reverse();
 
             return allFinalGradesInOrder;
         }
@@ -296,12 +304,20 @@ namespace CoursesAPI.Services.Services
         public String GetFinalRankings(int courseInstanceID, String studentID)
         {
             var allGrades = AllFinalGradesInOrder(courseInstanceID);
+            var reverse = new List<float>(allGrades);
+            reverse.Sort();
+
             var grade = GetCurrentFinalGrade(courseInstanceID, studentID);
 
-            int standing = ((allGrades.IndexOf(grade)) + 1);
-            String rankings = (standing.ToString() + "/" + allGrades.Count());
+            int frontStanding = ((allGrades.IndexOf(grade)) + 1);
+            int backStanding = (allGrades.Count() - (reverse.IndexOf(grade)));
 
-            return rankings;
+            if (frontStanding == backStanding)
+            {
+                return (frontStanding.ToString() + "/" + allGrades.Count());
+            }
+
+            return (frontStanding.ToString() + "-" + backStanding.ToString() + "/" + allGrades.Count());
         }
 
         /// <summary>
