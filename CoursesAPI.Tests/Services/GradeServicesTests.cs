@@ -28,6 +28,7 @@ namespace CoursesAPI.Tests.Services
             _mockUow.SetRepositoryData(_mockFactory.GetMock<Grade>());
             _mockUow.SetRepositoryData(_mockFactory.GetMock<Project>());
             _mockUow.SetRepositoryData(_mockFactory.GetMock<ProjectGroup>());
+            _mockUow.SetRepositoryData(_mockFactory.GetMock<Person>());
 		}
 
         /// <summary>
@@ -157,7 +158,7 @@ namespace CoursesAPI.Tests.Services
             // Arrange:
             const String studentID1 = "1309862429";
             const String studentID2 = "1303922299";
-
+          
             //Act:
             var projectRankingsFirst = _service.GetProjectRankings(studentID1, 1);
             var projectRankingsSecond = _service.GetProjectRankings(studentID2, 1);
